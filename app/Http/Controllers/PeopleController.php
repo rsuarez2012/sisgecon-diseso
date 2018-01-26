@@ -14,7 +14,10 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        //
+        $people = People::orderBy('employee_type')->paginate(10);
+        $count = People::count();
+        //dd($people);
+        return view('peoples.index', compact('people', 'count'));
     }
 
     /**
@@ -24,7 +27,7 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        //
+        return view('peoples.create');
     }
 
     /**
@@ -35,7 +38,13 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$da = $request->all();
+        //dd($da);
+        $people = People::create($request->all());
+        return redirect()->action('PeopleController@index')->with('info', 'Titular Almacenado con Exito.!');
+        //return redirect()->route('titular.editar', $people->id)->with('info', 'Titular Almacenado con Exito.!');
+        //return back()->with('info', 'Titular Almacenado con Exito.!');
+
     }
 
     /**

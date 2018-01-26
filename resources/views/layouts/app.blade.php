@@ -9,9 +9,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -70,11 +73,27 @@
                 </div>
             </div>
         </nav>
-
+        @if(session('info'))
+            <div class="alert alert-success">
+                {{ session('info') }}
+            </div>
+        @endif
         @yield('content')
     </div>
 
     <!-- Scripts -->
+    <!--<script src="http://code.jquery.com/jquery-3.3.1.js"
+              integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+              crossorigin="anonymous"></script>-->
+    <script src="{{ asset('js/jquery-2.0.3.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+
+    @yield('scripts')
+
+
+
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
 </body>
 </html>
