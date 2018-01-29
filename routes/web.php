@@ -14,12 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/titulares', 'PeopleController@index')->name('titulares');
+/*Route::get('/titulares', 'PeopleController@index')->name('titulares');
+Route::get('/titulares/{id}/ver', 'PeopleController@show')->name('show');
+Route::get('/titulares/{id}/editar', 'PeopleController@edit')->name('edit');
+Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares.actualizar');*/
 
-Route::resource('titulares', 'PeopleController');
-/*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');
-Route::post('/titular/guardar', 'PeopleController@store')->name('titularGuardar');
-Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/
+
+
+//panel administrativo
+Route::resource('titulares', 'Admin\PeopleController');
+/*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
+//Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
+/*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

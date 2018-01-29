@@ -13,7 +13,7 @@ $factory->define(App\People::class, function (Faker $faker) {
 	   'first_name' => $faker->firstName,
 	   'place_of_birth' => $faker->city,
 	   'last_name' => $faker->lastName,
-	   'marital_status' => $faker->randomElement($array = array ('Soltero(a)','Casado(a)')),
+	   'marital_status' => $faker->randomElement($array = array ('1','2')),
 	   'address' => $faker->city,
 	   'telephone' => $faker->e164PhoneNumber,
 	   'cellphone' => $faker->tollFreePhoneNumber,

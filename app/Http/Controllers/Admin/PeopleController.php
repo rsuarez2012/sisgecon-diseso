@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\People;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
 
 class PeopleController extends Controller
 {
@@ -17,7 +19,7 @@ class PeopleController extends Controller
         $people = People::orderBy('employee_type')->paginate(10);
         $count = People::count();
         //dd($people);
-        return view('peoples.index', compact('people', 'count'));
+        return view('admin.peoples.index', compact('people', 'count'));
     }
 
     /**
@@ -27,7 +29,7 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        return view('peoples.create');
+        return view('admin.peoples.create');
     }
 
     /**
@@ -41,7 +43,8 @@ class PeopleController extends Controller
         //$da = $request->all();
         //dd($da);
         $people = People::create($request->all());
-        return redirect()->action('PeopleController@index')->with('info', 'Titular Almacenado con Exito.!');
+        return redirect()->route('titulares.edit', $people->id)->with('info', 'Titular Almacenado con Exito.!');
+        //return redirect()->action('PeopleController@index')->with('info', 'Titular Almacenado con Exito.!');
         //return redirect()->route('titular.editar', $people->id)->with('info', 'Titular Almacenado con Exito.!');
         //return back()->with('info', 'Titular Almacenado con Exito.!');
 
@@ -53,9 +56,11 @@ class PeopleController extends Controller
      * @param  \App\People  $people
      * @return \Illuminate\Http\Response
      */
-    public function show(People $people)
+    public function show($id)
     {
-        //
+        $person = People::findOrFail($id);
+        //dd($person);
+        return view('admin.peoples.show')->with(compact('person'));
     }
 
     /**
@@ -64,9 +69,10 @@ class PeopleController extends Controller
      * @param  \App\People  $people
      * @return \Illuminate\Http\Response
      */
-    public function edit(People $people)
+    public function edit($id)
     {
-        //
+        $person = People::findOrFail($id);
+        return view('admin.peoples.edit', compact('person'));
     }
 
     /**
@@ -76,9 +82,15 @@ class PeopleController extends Controller
      * @param  \App\People  $people
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, People $people)
+    public function update(Request $request, $id)
     {
         //
+        $person = People::findOrFail($id);
+        $person->fill($request->all())->save();
+        //dd($person);
+        //return view('admin.peoples.show')->with(compact('person'));
+        return redirect()->route('titulares.show', $person->id)->with('info', 'Titular Editado con Exito.!');
+
     }
 
     /**
@@ -87,8 +99,9 @@ class PeopleController extends Controller
      * @param  \App\People  $people
      * @return \Illuminate\Http\Response
      */
-    public function destroy(People $people)
+    public function destroy($id)
     {
-        //
+        $peopl = People::find($id)->delete();
+        return back()->with('info', 'Eliminado correctamente');
     }
 }

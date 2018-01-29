@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-11 col-md-offset-1">
             <div class="panel panel-default">
 
                 <div class="panel-heading">
@@ -34,10 +34,18 @@
 								<td>{{ $peopl->id }}</td>
 								 <td>{{	$peopl->dni	}}</td>
 								 <td>{{	$peopl->first_name.' '.$peopl->last_name	}}</td>
-								 <td>{{	$peopl->employee_type	}}</td>
+								 <td>{{	$peopl->type_employee	}}</td>
 								 <td>{{ $peopl->date_of_admission }}</td>
 								 <td>@if($peopl->status == 1) Activo @elseif ($peopl->status == 2)	Jubilado @elseif($peopl->status == 3)	Pensionado @else($peopl->status == 4) Incapacitado @endif</td>
-								 <td><button class="btn btn-info btn-sm">Ver</button> <button class="btn btn-success btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Eliminar</button></td> 				    
+								 <td>
+								 	<a href="{{ route('titulares.show', $peopl->id) }}" class="btn btn-info btn-sm">Ver</a>
+								 	<a href="{{ route('titulares.edit', $peopl->id) }}" class="btn btn-success btn-sm">Editar</a>
+								 			{!! Form::open(['route'=>['titulares.destroy', $peopl->id], 'method'=> 'DELETE']) !!}
+
+								 			<button class="btn btn-danger btn-sm">Eliminar</button>
+
+								 		{!! Form::close() !!}
+								 	</td> 				    
 								
 							</tr>
 
