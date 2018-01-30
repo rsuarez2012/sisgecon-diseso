@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <td>{{ $person->place_of_birth }}</td>
-                <td>{{ $person->birthdate}}</td>
+                <td>{{ Carbon\Carbon::parse($person->birthdate)->format('d-m-Y') }}</td>
 
             </tr>       
             <tr>
@@ -56,7 +56,7 @@
                 
             </tr>
             <tr>
-                <td colspan="2">{{ $person->date_of_admission }}</td>
+                <td colspan="2">{{ Carbon\Carbon::parse($person->date_of_admission)->format('d-m-Y') }}</td>
                 
           </tr>
           <tr>

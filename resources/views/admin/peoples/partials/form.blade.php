@@ -1,5 +1,4 @@
-	<input type="hidden" name="id" value="{{-- $person->id --}}">
-	{{ Form::hidden('$person->id') }}
+	{{ Form::hidden('$people->id') }}
   <div class="form-group col-md-4">
     {{ Form::text('first_name', null, ['class' => 'form-control', 'id' => 'first_name']) }}
     <small id="nameHelp" class="form-text text-muted">Nombre del titular</small>

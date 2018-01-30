@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PeopleStoreRequest;
 use App\Http\Requests\PeopleUpdateRequest;
+use Carbon\Carbon;
 
 class PeopleController extends Controller
 {
@@ -65,6 +66,9 @@ class PeopleController extends Controller
      */
     public function show($id)
     {
+        //$date = Carbon::now();
+        //$date = $date->format('d-m-Y');
+        //dd($date);
         $person = People::findOrFail($id);
         //dd($person);
         return view('admin.peoples.show')->with(compact('person'));
@@ -78,8 +82,9 @@ class PeopleController extends Controller
      */
     public function edit($id)
     {
-        $person = People::findOrFail($id);
-        return view('admin.peoples.edit', compact('person'));
+        $people = People::findOrFail($id);
+        //dd($people);
+        return view('admin.peoples.edit', compact('people'));
     }
 
     /**
@@ -92,11 +97,13 @@ class PeopleController extends Controller
     public function update(PeopleUpdateRequest $request, $id)
     {
         //
-        $person = People::findOrFail($id);
-        $person->fill($request->all())->save();
+        $people = People::findOrFail($id);
+        //dd($people);
+        //$person->People::find($id);
+        $people->fill($request->all())->save();
         //dd($person);
-        //return view('admin.peoples.show')->with(compact('person'));
-        return redirect()->route('titulares.show', $person->id)->with('info', 'Titular Editado con Exito.!');
+        //return view('admin.peoples.show')->with(compact('people'));
+        return redirect()->route('titulares.show', $people->id)->with('info', 'Titular Editado con Exito.!');
 
     }
 

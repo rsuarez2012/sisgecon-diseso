@@ -35,10 +35,12 @@
 								 <td>{{	$peopl->dni	}}</td>
 								 <td>{{	$peopl->first_name.' '.$peopl->last_name	}}</td>
 								 <td>{{	$peopl->type_employee	}}</td>
-								 <td>{{ $peopl->date_of_admission }}</td>
+								 <td>{{ Carbon\Carbon::parse($peopl->date_of_admission)->format('d-m-Y') }}</td>
 								 <td>@if($peopl->status == 1) Activo @elseif ($peopl->status == 2)	Jubilado @elseif($peopl->status == 3)	Pensionado @else($peopl->status == 4) Incapacitado @endif</td>
 								 <td>
 								 	<a href="{{ route('titulares.show', $peopl->id) }}" class="btn btn-info btn-sm">Ver</a>
+								 </td>
+								 <td>
 								 	<a href="{{ route('titulares.edit', $peopl->id) }}" class="btn btn-success btn-sm">Editar</a>
 								 </td>
 								 <td>

@@ -12,7 +12,9 @@
                 </div>
 				<br>
 				<div class="panel-body">
-                    {!! Form::model($person, ['route' => ['titulares.update', $person->id], 'method' => 'PUT'])!!}
+                    {!! Form::model($people, ['route' => ['titulares.update', $people->id], 'method' => 'PUT'])!!}
+					<input type="hidden" name="id" value="{{-- $person->id --}}">
+
                         
                         @include('admin.peoples.partials.form')
 
