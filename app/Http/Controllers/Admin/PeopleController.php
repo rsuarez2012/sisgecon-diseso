@@ -6,9 +6,16 @@ use App\People;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PeopleStoreRequest;
+use App\Http\Requests\PeopleUpdateRequest;
 
 class PeopleController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +45,7 @@ class PeopleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PeopleStoreRequest $request)
     {
         //$da = $request->all();
         //dd($da);
@@ -82,7 +89,7 @@ class PeopleController extends Controller
      * @param  \App\People  $people
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PeopleUpdateRequest $request, $id)
     {
         //
         $person = People::findOrFail($id);

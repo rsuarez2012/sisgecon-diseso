@@ -59,6 +59,12 @@
                 <td colspan="2">{{ $person->date_of_admission }}</td>
                 
           </tr>
+          <tr>
+            <td colspan="2">
+                <a href="{{ route('titulares.edit', $person->id) }}" class="btn btn-success btn-sm">Editar</a>
+                <a class="btn btn-danger btn-sm" onclick="javascript:history.back();"><i class=""></i>Cancelar</a>
+            </td>
+          </tr>
         </table>
     </div>
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-11 col-md-offset-1">
+		<div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
 
                 <div class="panel-heading">
@@ -25,7 +25,7 @@
 								<th>Tipo de Empleado</th>
 								<th>Fecha de Ingreso</th>
 								<th>Estatus</th>
-								<th>Acciones</th>
+								<th colspan="3">Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -40,6 +40,9 @@
 								 <td>
 								 	<a href="{{ route('titulares.show', $peopl->id) }}" class="btn btn-info btn-sm">Ver</a>
 								 	<a href="{{ route('titulares.edit', $peopl->id) }}" class="btn btn-success btn-sm">Editar</a>
+								 </td>
+								 <td>
+								 	
 								 			{!! Form::open(['route'=>['titulares.destroy', $peopl->id], 'method'=> 'DELETE']) !!}
 
 								 			<button class="btn btn-danger btn-sm">Eliminar</button>

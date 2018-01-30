@@ -49,6 +49,7 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                            <li><a href="{{ route('titulares.index') }}">Titulares</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -80,8 +81,19 @@
                         <div class="alert alert-success">
                             {{ session('info') }}
                         </div>
-                    @endif
+                    @endif                    
                 </div>
+                @if(count($errors))            
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>          
+                @endif
             </div>
         </div>
         @yield('content')

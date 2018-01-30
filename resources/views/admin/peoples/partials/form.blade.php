@@ -25,11 +25,12 @@
     <small id="birthdateHelp" class="form-text text-muted">Fecha de Nacimiento</small>
   </div>
   <div class="form-group col-md-4">
-    <select class="form-control" id="gender" name="gender" aria-describedby="genderHelp" >
+  	{{  Form::select('gender', ['1' => 'Femenino', '2' => 'Masculino'], null, ['class' => 'form-control', 'id' => 'gender']) }}
+    <!--<select class="form-control" id="gender" name="gender" aria-describedby="genderHelp" >
       <option>Seleccione el Sexo</option>
       <option value="1">Femenino</option>
       <option value="2">Masculino</option>
-    </select>
+    </select>-->
 
     <small id="genderHelp" class="form-text text-muted">Sexo del titular</small>
   </div>
@@ -48,12 +49,13 @@
 
 
   <div class="form-group col-md-4">
-    <select class="form-control" id="marital_status" name="marital_status" aria-describedby="marital_statusHelp" >
+  	{{  Form::select('marital_status', ['1' => 'Soltero(a)', '2' => 'Casado(a)', '3' => 'Viudo(a)'], null, ['class' => 'form-control', 'id' => 'marital_status']) }}
+    <!--<select class="form-control" id="marital_status" name="marital_status" aria-describedby="marital_statusHelp" >
       <option>Estado Civil</option>
       <option value="1">Soltero(a)</option>
       <option value="2">Casado(a)</option>
       <option value="3">Viudo(a)</option>
-    </select>
+    </select>-->
     <small id="marital_statusHelp" class="form-text text-muted">Estado Civil</small>
   </div>
   
@@ -69,7 +71,8 @@
   </div>
   
   <div class="form-group col-md-4">
-    <select class="form-control" id="employee_type" name="employee_type" aria-describedby="employee_typeHelp" >
+  	{{  Form::select('employee_type', ['1' => 'Administrativo', '2' => 'Administrativo-Contratado', '3' => 'Docente', '4' => 'Docente-Contratado', '5' => 'Obrero', '6' => 'Obrero-Contratado'], null, ['class' => 'form-control', 'id' => 'employee_type']) }}
+    <!--<select class="form-control" id="employee_type" name="employee_type" aria-describedby="employee_typeHelp" >
       <option>Tipo de Empleado</option>
       <option value="1">Administrativo</option>
       <option value="2">Administrativo-Contratado</option>
@@ -77,7 +80,7 @@
       <option value="4">Docente-Contratado</option>
       <option value="5">Obrero</option>
       <option value="6">Obrero-Contratado</option>
-    </select>
+    </select>-->
     <small id="employee_typeHelp" class="form-text text-muted">Tipo de Empleado</small>
   </div>
 
@@ -92,13 +95,14 @@
     <small id="positionHelp" class="form-text text-muted">Cargo</small>
   </div>
   <div class="form-group col-md-4">
-    <select class="form-control" id="status" name="status" aria-describedby="statusHelp" >
+  	{{  Form::select('status', ['1' => 'Activo', '2' => 'Jubilado', '3' => 'Pensionado', '4' => 'Incapacitado'], null, ['class' => 'form-control', 'id' => 'marital_status']) }}
+    <!--<select class="form-control" id="status" name="status" aria-describedby="statusHelp" >
       <option>Estatus del Empleado</option>
       <option value="1">Activo</option>
       <option value="2">Jubilado</option>
       <option value="3">Pensionado</option>
       <option value="4">Incapacitado</option>
-    </select>
+    </select>-->
     <small id="statusHelp" class="form-text text-muted">Estatus del Titular</small>
   </div>
   <div class="form-group">
