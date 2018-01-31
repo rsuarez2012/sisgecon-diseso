@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Beneficiary;
+use App\People;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -15,7 +16,9 @@ class BeneficiaryController extends Controller
      */
     public function index()
     {
-        //
+        $beneficiaries = Beneficiary::orderBy('people_id')->paginate(10);
+        //dd($beneficiaries);
+        return view('admin.beneficiaries.index', compact('beneficiaries'));
     }
 
     /**
@@ -25,7 +28,9 @@ class BeneficiaryController extends Controller
      */
     public function create()
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->pluck('first_name', 'id');
+        //dd($peoples);
+        return view('admin.beneficiaries.create', compact('peoples'));
     }
 
     /**
@@ -36,7 +41,10 @@ class BeneficiaryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$da = $request->all();
+        //dd($da);
+        $beneficiaries = Beneficiary::create($request->all());
+        return redirect()->route('beneficiarios.edit', $beneficiaries->id)->with('info', 'Beneficiario Almacenado con Exito.!');
     }
 
     /**
@@ -45,9 +53,12 @@ class BeneficiaryController extends Controller
      * @param  \App\Beneficiary  $beneficiary
      * @return \Illuminate\Http\Response
      */
-    public function show(Beneficiary $beneficiary)
+    public function show($id)
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->pluck('first_name', 'id');
+        $beneficiary = Beneficiary::findOrFail($id);
+        //dd($beneficiary);
+        return view('admin.beneficiaries.show')->with(compact('beneficiary', 'peoples'));
     }
 
     /**
@@ -56,9 +67,12 @@ class BeneficiaryController extends Controller
      * @param  \App\Beneficiary  $beneficiary
      * @return \Illuminate\Http\Response
      */
-    public function edit(Beneficiary $beneficiary)
+    public function edit($id)
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->pluck('first_name', 'id');
+        $beneficiary = Beneficiary::findOrFail($id);
+        //dd($people);
+        return view('admin.beneficiaries.edit', compact('beneficiary', 'peoples'));
     }
 
     /**
@@ -79,8 +93,9 @@ class BeneficiaryController extends Controller
      * @param  \App\Beneficiary  $beneficiary
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Beneficiary $beneficiary)
+    public function destroy($id)
     {
-        //
+        $beneficiary = Beneficiary::find($id)->delete();
+        return back()->with('info', 'Beneficiario Eliminado correctamente.!');
     }
 }
