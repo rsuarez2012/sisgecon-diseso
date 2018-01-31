@@ -24,7 +24,7 @@ class PeopleStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'firs_name'         => 'required',
+            'first_name'         => 'required',
             'last_name'         => 'required',
             'dni'               => 'required|unique:people,dni',
             'place_of_birth'    => 'required',
@@ -47,7 +47,7 @@ class PeopleStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'firs_name.required'        => 'El nombre del titular es requerido.',
+            'first_name.required'        => 'El nombre del titular es requerido.',
             'last_name.required'        => 'El apellido del titular es requerido.',
             'dni.required'              => 'La cedula del titular es requerido.',
             'place_of_birth'            => 'El lugar de nacimiento es requerido.',
