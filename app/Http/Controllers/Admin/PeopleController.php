@@ -10,6 +10,8 @@ use App\Http\Requests\PeopleStoreRequest;
 use App\Http\Requests\PeopleUpdateRequest;
 use Carbon\Carbon;
 
+
+use App\Beneficiary;
 class PeopleController extends Controller
 {
 
@@ -117,5 +119,15 @@ class PeopleController extends Controller
     {
         $peopl = People::find($id)->delete();
         return back()->with('info', 'Eliminado correctamente');
+    }
+
+
+    //ver carga familiar
+    public function beneficiaries($id)
+    {
+        $people = People::findOrFail($id);
+        $cargas = Beneficiary::all()->where('people_id', $id);
+        //dd($carga);
+        return view('admin.peoples.beneficiaries', compact('people', 'cargas'));
     }
 }

@@ -31,7 +31,7 @@
 							@foreach ($beneficiaries as $beneficiary)
 							<tr>
 								 <td>{{ $beneficiary->id }}</td>
-								 <td>{{	$beneficiary->people_id	}}</td>
+								 <td>{{	$beneficiary->people->full_name	}}</td>
 								 <td>{{	$beneficiary->first_name.' '.$beneficiary->last_name }}</td>
 								 <td>{{	$beneficiary->dni }}</td>
 								 <td>{{ Carbon\Carbon::parse($beneficiary->birthdate)->format('d-m-Y') }}</td>

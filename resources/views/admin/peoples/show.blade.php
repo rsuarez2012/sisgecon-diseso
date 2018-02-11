@@ -5,7 +5,9 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-        <h4>{{ $person->dni.' - '.$person->first_name.' '.$person->last_name }}</h4>
+            <h4>{{ $person->dni.' - '.$person->first_name.' '.$person->last_name }}</h4>
+        
+        <a href="{{ route('titulares.beneficiarios', $person->id) }}" class="btn btn-warning btn-sm">Ver Carga Familiar</a>
       </div>
 
         <table class="table">

@@ -15,6 +15,10 @@ class Beneficiary extends Model
     	'birthdate', 
     	'relationship' 
     ];
+    public function people()
+    {
+        return $this->belongsTo('App\People');
+    }
 
     public function getTypeRelationshipAttribute()
 	{

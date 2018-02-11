@@ -9,6 +9,11 @@ class People extends Model
 	protected $table = 'people';
     protected $fillable = ['dni', 'first_name', 'last_name', 'place_of_birth', 'marital_status', 'address', 'telephone', 'cellphone', 'email', 'employee_type', 'position', 'status', 'gender', 'birthdate', 'date_of_admission' ];
 
+    public function beneficiaries()
+    {
+    	return $this->hasMany('App\Beneficiary');
+    }
+
     public function getTypeEmployeeAttribute()
 	{
 		switch($this->employee_type)
@@ -65,6 +70,10 @@ class People extends Model
 						
 		}
 		
+	}
+	public function getFullNameAttribute()
+	{
+		return "{$this->first_name} {$this->last_name} {$this->dni}";
 	}	
 
 }

@@ -28,7 +28,7 @@ class BeneficiaryController extends Controller
      */
     public function create()
     {
-        $peoples = People::orderBy('id', 'ASC')->pluck('first_name', 'id');
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
         //dd($peoples);
         return view('admin.beneficiaries.create', compact('peoples'));
     }
@@ -69,7 +69,7 @@ class BeneficiaryController extends Controller
      */
     public function edit($id)
     {
-        $peoples = People::orderBy('id', 'ASC')->pluck('first_name', 'id');
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
         $beneficiary = Beneficiary::findOrFail($id);
         //dd($people);
         return view('admin.beneficiaries.edit', compact('beneficiary', 'peoples'));
@@ -82,9 +82,13 @@ class BeneficiaryController extends Controller
      * @param  \App\Beneficiary  $beneficiary
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Beneficiary $beneficiary)
+    public function update(Request $request, $id)
     {
-        //
+        $beneficiary = Beneficiary::findOrFail($id);
+        
+        $beneficiary->fill($request->all())->save();
+        
+        return redirect()->route('beneficiarios.show', $beneficiary->id)->with('info', 'Beneficiario Editado con Exito.!');
     }
 
     /**

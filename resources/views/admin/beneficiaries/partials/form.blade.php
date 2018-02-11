@@ -29,7 +29,7 @@
 
   <div class="form-group col-md-4">
   	{{  Form::select('relationship', ['1' => 'Madre', '2' => 'Padre', '3' => 'Hijo(a)', '4' => 'Conyuge', '5' => 'Otros'], null, ['class' => 'form-control', 'id' => 'relationship']) }}
-    <small id="marital_statusHelp" class="form-text text-muted">Estado Civil</small>
+    <small id="relationship" class="form-text text-muted">Parentesco</small>
   </div>
   
    <div class="form-group">

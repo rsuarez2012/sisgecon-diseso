@@ -5,7 +5,7 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-        <h4>titular:{{ $beneficiary->people_id }}</h4>
+        <h4>Titular: {{ $beneficiary->people->full_name }}</h4>
       </div>
 
         <table class="table">
