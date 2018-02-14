@@ -8,6 +8,7 @@
             <h4>{{ $person->dni.' - '.$person->first_name.' '.$person->last_name }}</h4>
         
         <a href="{{ route('titulares.beneficiarios', $person->id) }}" class="btn btn-warning btn-sm">Ver Carga Familiar</a>
+        <a class="btn btn-primary btn-sm pull-right" href="{{ route('beneficiarios.create') }}">Nuevo Beneficiario</a>
       </div>
 
         <table class="table">
