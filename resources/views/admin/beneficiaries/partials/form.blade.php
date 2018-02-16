@@ -1,6 +1,6 @@
   <div class="form-group col-md-12">
-    {{ Form::label('people_id', 'Titular') }}
-    {{ Form::select('people_id', $peoples, null, ['class' => 'form-control']) }}
+    {{-- Form::label('people_id', 'Titular') --}}
+    {{-- Form::select('people_id', $peoples, null, ['class' => 'form-control']) --}}
   </div>
   <div class="form-group col-md-4">
     {{ Form::text('first_name', null, ['class' => 'form-control', 'id' => 'first_name']) }}

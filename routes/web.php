@@ -25,6 +25,7 @@ Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares
 Route::resource('titulares', 'Admin\PeopleController');
 Route::get('ver_carga/{id}/', 'Admin\PeopleController@beneficiaries')->name('titulares.beneficiarios');
 Route::resource('beneficiarios', 'Admin\BeneficiaryController');
+Route::get('nuevo-beneficiario/{people_id}',  'Admin\BeneficiaryController@create')->name('nuevo_beneficiario');
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
 /*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/

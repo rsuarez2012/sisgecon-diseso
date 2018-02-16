@@ -13,7 +13,7 @@
 				<br>
 				<div class="panel-body">
                     {!! Form::open(['route' => ['beneficiarios.store'], 'files' => true]) !!}
-                        
+                        <input type="hidden" id='people_id' name="people_id" value="{{ $people_id}}">
                         @include('admin.beneficiaries.partials.form')
 
                     {!! Form::close() !!}

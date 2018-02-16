@@ -15,8 +15,12 @@
                     {!! Form::model($beneficiary, ['route' => ['beneficiarios.update', $beneficiary->id], 'method' => 'PUT'])!!}
 					<input type="hidden" name="id" value="{{-- $person->id --}}">
 
-                        
+                        <div class="form-group col-md-12">
+                          {{ Form::label('people_id', 'Titular') }}
+                          {{ Form::select('people_id', $peoples, null, ['class' => 'form-control']) }}
+                        </div>                       
                         @include('admin.beneficiaries.partials.form')
+
 
                     {!! Form::close() !!}
 				</div>

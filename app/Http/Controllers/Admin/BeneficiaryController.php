@@ -26,11 +26,13 @@ class BeneficiaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $people_id = $request->people_id;
+        //dd($people_id);
         $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
         //dd($peoples);
-        return view('admin.beneficiaries.create', compact('peoples'));
+        return view('admin.beneficiaries.create', compact('peoples', 'people_id'));
     }
 
     /**
