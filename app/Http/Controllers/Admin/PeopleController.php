@@ -130,4 +130,6 @@ class PeopleController extends Controller
         //dd($carga);
         return view('admin.peoples.beneficiaries', compact('people', 'cargas'));
     }
+    
+
 }

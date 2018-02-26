@@ -17,7 +17,7 @@
 
                         <div class="form-group col-md-12">
                           {{ Form::label('people_id', 'Titular') }}
-                          {{ Form::select('people_id', $peoples, null, ['class' => 'form-control']) }}
+                          {{ Form::select('people_id', $peoples, null, ['class' => 'form-control', 'id' => 'people']) }}
                         </div>                       
                         @include('admin.beneficiaries.partials.form')
 
@@ -41,8 +41,11 @@
 
 @endsection
 @section('scripts')
+
 <script type="text/javascript">
 $(document).ready(function(){
+  $('#people').select2();
+
 	$.fn.datepicker.dates['es'] = {
         days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
         daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
