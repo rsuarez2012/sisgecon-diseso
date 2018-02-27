@@ -22,11 +22,24 @@ Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares
 
 
 //panel administrativo
+//titulares
 Route::resource('titulares', 'Admin\PeopleController');
 Route::get('ver_carga/{id}/', 'Admin\PeopleController@beneficiaries')->name('titulares.beneficiarios');
 Route::get('/personas/autocomplete', 'HomeController@autocomplete');
+
+
+//beneficiarios
 Route::resource('beneficiarios', 'Admin\BeneficiaryController');
 Route::get('nuevo-beneficiario/{people_id}',  'Admin\BeneficiaryController@create')->name('nuevo_beneficiario');
+
+
+//Dependencias
+Route::resource('dependencias', 'Admin\DependencyController');
+
+
+//historias
+Route::resource('historias', 'Admin\HistoryController');
+
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
 /*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/

@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class People extends Model
 {
 	protected $table = 'people';
-    protected $fillable = ['dni', 'first_name', 'last_name', 'place_of_birth', 'marital_status', 'address', 'telephone', 'cellphone', 'email', 'employee_type', 'position', 'status', 'gender', 'birthdate', 'date_of_admission' ];
+    protected $fillable = ['dni', 'first_name', 'last_name', 'place_of_birth', 'marital_status', 'address', 'telephone', 'cellphone', 'email', 'employee_type', 'position', 'status', 'gender', 'birthdate', 'date_of_admission', 'dependency_id' ];
 
     public function beneficiaries()
     {
     	return $this->hasMany('App\Beneficiary');
+    }
+    public function dependencies()
+    {
+        return $this->belongsTo('App\Dependency', 'dependency_id');
     }
 
     public function getTypeEmployeeAttribute()

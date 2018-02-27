@@ -104,6 +104,11 @@
     </select>-->
     <small id="statusHelp" class="form-text text-muted">Estatus del Titular</small>
   </div>
+  <div class="form-group col-md-12">
+    {{-- Form::label('people_id', 'Titular') --}}
+    {{ Form::select('dependency_id', $dependencies, null, ['class' => 'form-control']) }}
+    <small id="statusHelp" class="form-text text-muted">Dependencia a la que pertenece el Titular</small>
+  </div>
   <div class="form-group">
 	  {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
 	  <a class="btn btn-danger btn-sm" onclick="javascript:history.back();"><i class=""></i>Cancelar</a>

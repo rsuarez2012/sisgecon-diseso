@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\People;
+use App\Dependency;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
@@ -39,7 +40,8 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        return view('admin.peoples.create');
+        $dependencies = Dependency::orderBy('id', 'ASC')->get()->pluck('dependency', 'id');
+        return view('admin.peoples.create', compact('dependencies'));
     }
 
     /**
@@ -71,9 +73,10 @@ class PeopleController extends Controller
         //$date = Carbon::now();
         //$date = $date->format('d-m-Y');
         //dd($date);
+        $dependencies = Dependency::orderBy('id', 'ASC')->pluck('dependency', 'id');
         $person = People::findOrFail($id);
         //dd($person);
-        return view('admin.peoples.show')->with(compact('person'));
+        return view('admin.peoples.show')->with(compact('person', 'dependencies'));
     }
 
     /**
@@ -85,8 +88,9 @@ class PeopleController extends Controller
     public function edit($id)
     {
         $people = People::findOrFail($id);
+        $dependencies = Dependency::orderBy('id', 'ASC')->get()->pluck('dependency', 'id');
         //dd($people);
-        return view('admin.peoples.edit', compact('people'));
+        return view('admin.peoples.edit', compact('people', 'dependencies'));
     }
 
     /**

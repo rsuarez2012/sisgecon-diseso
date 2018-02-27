@@ -55,11 +55,13 @@
                 <td>{{ $person->position }}</td>
           </tr>
           <tr>
-                <th colspan="2">Fecha de Ingreso</th>
+                <th>Fecha de Ingreso</th>
+                <th>Dependencia Adscrita</th>
                 
             </tr>
             <tr>
-                <td colspan="2">{{ Carbon\Carbon::parse($person->date_of_admission)->format('d-m-Y') }}</td>
+                <td>{{ Carbon\Carbon::parse($person->date_of_admission)->format('d-m-Y') }}</td>
+                <td>{{ $person->dependencies->info }}</td>
                 
           </tr>
           <tr>
