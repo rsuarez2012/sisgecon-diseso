@@ -60,7 +60,7 @@ class CreateHistoriesTable extends Migration
             $table->enum('cough', ['SI', 'NO'])->default('NO');//examen funcional tos 
             $table->enum('expectoration', ['SI', 'NO'])->default('NO');//examen funcional expectoracion al respirar
 
-            $table->enum('abdomen pain', ['SI', 'NO'])->default('NO');//examen funcional  general fiebre 
+            $table->enum('abdomen_pain', ['SI', 'NO'])->default('NO');//examen funcional  general fiebre 
             $table->enum('diarrhea', ['SI', 'NO'])->default('NO');//examen funcional cabeza mareos
             $table->enum('hernias', ['SI', 'NO'])->default('NO');//examen funcional dolor cabeza
             $table->enum('genitals_man', ['SI', 'NO'])->default('NO');//examen funcional ojos: vision borrosa
@@ -93,25 +93,30 @@ class CreateHistoriesTable extends Migration
             $table->string('skin');
             $table->string('head');
 
-            $table->enum('symmetry eyes', ['SI', 'NO'])->default('NO');//examen funcional dolor en senos
-            $table->enum('asymmetry eyes', ['SI', 'NO'])->default('NO');
+            $table->enum('symmetrical_mouth', ['SI', 'NO'])->default('NO');//examen funcional dolor en senos
+            $table->enum('rshas', ['SI', 'NO'])->default('NO');
             $table->enum('nostrils', ['SI', 'NO'])->default('NO');
-            $table->enum('mouth asymmetry', ['SI', 'NO'])->default('NO');
-            $table->enum('symmetrical neck', ['SI', 'NO'])->default('NO');
-            $table->enum('asymmetrical neck', ['SI', 'NO'])->default('NO');
-            $table->enum('symmetrical sinuses', ['SI', 'NO'])->default('NO');
+            $table->enum('mouth_asymmetry', ['SI', 'NO'])->default('NO');
+            $table->enum('symmetrical_neck', ['SI', 'NO'])->default('NO');
+            $table->enum('asymmetrical_neck', ['SI', 'NO'])->default('NO');
+            $table->enum('symmetrical_sinuses', ['SI', 'NO'])->default('NO');
             $table->string('pulses');
-            $table->enum('asymmetric thorax', ['SI', 'NO'])->default('NO');
+            $table->enum('asymmetric_thorax', ['SI', 'NO'])->default('NO');
             $table->enum('symmetric_thorax', ['SI', 'NO'])->default('NO');
             $table->enum('rs_cs', ['SI', 'NO'])->default('NO');
             $table->enum('soplo', ['SI', 'NO'])->default('NO');
             $table->enum('ritmo', ['SI', 'NO'])->default('NO');
+            $table->enum('rs', ['SI', 'NO'])->default('NO');
+            $table->enum('mv', ['SI', 'NO'])->default('NO');
             $table->enum('globose', ['SI', 'NO'])->default('NO');
             $table->enum('flat', ['SI', 'NO'])->default('NO');
             $table->enum('soft', ['SI', 'NO'])->default('NO');
             $table->enum('painful', ['SI', 'NO'])->default('NO');
+            $table->enum('male_genitals', ['SI', 'NO'])->default('NO');
+            $table->enum('female_genitals', ['SI', 'NO'])->default('NO');
             $table->enum('anal_canal', ['SI', 'NO'])->default('NO');
             $table->enum('asymmetric_tips', ['SI', 'NO'])->default('NO');
+            $table->enum('symmetrical tips', ['SI', 'NO'])->default('NO');
             $table->enum('eutrophic', ['SI', 'NO'])->default('NO');
             $table->enum('atrophied', ['SI', 'NO'])->default('NO');
             $table->enum('varicose_veins', ['SI', 'NO'])->default('NO');

@@ -33,3 +33,11 @@
 
 
 @endsection
+@section('scripts')
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#people').select2();
+});
+</script>
+@endsection

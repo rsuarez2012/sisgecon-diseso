@@ -14,7 +14,7 @@
                 	<!--<button  class="btn btn-primary btn-sm pull-right">Nuevo</button>-->
 
                 </div>
-                <div class="body">
+                <div class="panel-body">
                 	
             		<table class="table">
 						<thead>

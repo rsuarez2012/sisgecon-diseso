@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\History;
+use App\People;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class HistoryController extends Controller
@@ -24,7 +25,8 @@ class HistoryController extends Controller
      */
     public function create()
     {
-        return view('admin.histories.create');
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        return view('admin.histories.create', compact('peoples'));
     }
 
     /**
@@ -35,7 +37,8 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $da = $request->all();
+        dd($da);
     }
 
     /**
