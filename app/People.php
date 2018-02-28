@@ -13,6 +13,10 @@ class People extends Model
     {
     	return $this->hasMany('App\Beneficiary');
     }
+    public function histories()
+    {
+    	return $this->hasMany('App\History');
+    }
     public function dependencies()
     {
         return $this->belongsTo('App\Dependency', 'dependency_id');
@@ -78,6 +82,10 @@ class People extends Model
 	public function getFullNameAttribute()
 	{
 		return "{$this->first_name} {$this->last_name} {$this->dni}";
+	}
+	public function getHistoryAttribute()
+	{
+		return $this->dni;
 	}	
 
 }

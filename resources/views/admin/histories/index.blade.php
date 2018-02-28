@@ -20,18 +20,26 @@
 						<thead>
 							<tr>
 								<th>Id</th>
-								<th>Dependencia</th>
+								<th>Numero de Historia</th>
+								<th>Titular</th>
+								
 								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>	
-										
+							@foreach($histories as $history)			
 							<tr>
-								<td></td>
-								<td></td> 
-								<td></td>
+								<td>{{ $history->id }}</td>
+								<td>{{ $history->people->history }}</td>
+								<td>{{ $history->people->full_name }}</td> 
+								<td>
+									<a href="{{ route('historias.show', $history->id) }}" class="btn btn-info btn-sm">Ver</a>
+									<a href="{{ route('historias.edit', $history->id) }}" class="btn btn-success btn-sm">Editar</a>
+									<a href="{{ route('historias.destroy', $history->id) }}" class="btn btn-danger btn-sm">Editar</a>
+								</td>
+								
 							</tr>
-													
+							@endforeach						
 						</tbody>
 						
 					</table>						

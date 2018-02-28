@@ -7,16 +7,16 @@
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                	<b class="sub-header">Editar Dependencia</b>
+                	<b class="sub-header">Editar Historia</b>
                 	
                 </div>
 				<br>
 				<div class="panel-body">
-                    {!! Form::model($dependency, ['route' => ['dependencias.update', $dependency->id], 'method' => 'PUT'])!!}
+                    {!! Form::model($history, ['route' => ['historias.update', $history->id], 'method' => 'PUT'])!!}
 					<input type="hidden" name="id" value="{{-- $person->id --}}">
 
                         
-                        @include('admin.dependencies.partials.form')
+                        @include('admin.histories.partials.form')
 
                     {!! Form::close() !!}
 				</div>

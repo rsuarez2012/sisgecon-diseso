@@ -15,7 +15,8 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        return view('admin.histories.index');
+        $histories = History::all();
+        return view('admin.histories.index', compact('histories'));
     }
 
     /**
@@ -25,8 +26,9 @@ class HistoryController extends Controller
      */
     public function create()
     {
+        $options = ['SI' => 'SI', 'NO' => 'NO'];
         $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
-        return view('admin.histories.create', compact('peoples'));
+        return view('admin.histories.create', compact('peoples', 'options'));
     }
 
     /**
@@ -37,8 +39,10 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        $da = $request->all();
-        dd($da);
+        //$da = $request->all();
+        //dd($da);
+        $history = History::create($request->all());
+        return redirect()->route('historias.edit', $history->id)->with('info', 'Historia Almacenado con Exito.!');
     }
 
     /**
@@ -47,9 +51,12 @@ class HistoryController extends Controller
      * @param  \App\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function show(History $history)
+    public function show($id)
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $history = History::findOrFail($id);
+        //dd($people);
+        return view('admin.histories.show', compact('history', 'peoples', 'options'));
     }
 
     /**
@@ -58,9 +65,13 @@ class HistoryController extends Controller
      * @param  \App\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function edit(History $history)
+    public function edit($id)
     {
-        //
+        $options = ['SI' => 'SI', 'NO' => 'NO'];
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $history = History::findOrFail($id);
+        //dd($people);
+        return view('admin.histories.edit', compact('history', 'peoples', 'options'));
     }
 
     /**

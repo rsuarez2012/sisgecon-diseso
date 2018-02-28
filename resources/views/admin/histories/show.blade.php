@@ -5,15 +5,15 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-            <h4>Dependencia</h4>
+            <h4>Historia Medica el Titular: {{ $history->people->full_name }}</h4>
       </div>
 
         <table class="table">
             <tr>
-                <th>Nombre</th>              
+                <th>Numero de Historia</th>              
             </tr>
             <tr>
-                <td>{{ $dependency->dependency }}</td>
+                <td>{{ $history->people->history }}</td>
             </tr>       
             
         </table>
