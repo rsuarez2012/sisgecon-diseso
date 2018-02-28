@@ -66,20 +66,20 @@
 			<p><b>Habitos Psicobiologicos</b></p>
 
 			<div class="form-group col-md-6">
-			    {{ Form::checkbox('alcohol', 'YES', false) }}
+			    {{ Form::checkbox('alcohol', 'SI', false) }}
 			    
 			    <small id="nameHelp" class="form-text text-muted">Alcohol</small>
 			</div>
 			<div class="form-group col-md-6">
-			    {{ Form::checkbox('cigarettes', 'YES', false) }}
+			    {{ Form::checkbox('cigarettes', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Cigarrillos</small>
 			  </div>
 			  <div class="form-group col-md-6">
-			    {{ Form::checkbox('cofe', 'YES', false) }}
+			    {{ Form::checkbox('cofe', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Cafe</small>
 			</div>
 			<div class="form-group col-md-6">
-			    {{ Form::checkbox('tobacco', 'YES', false) }}
+			    {{ Form::checkbox('tobacco', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Tabaco</small>
 			</div>
 
@@ -87,55 +87,55 @@
 			<div class="form-group col-md-3">
 				{{ Form::label('fever', 'General:') }}
 				<small id="nameHelp" class="form-text text-muted">Fiebre</small>
-			    {{ Form::checkbox('fever', 'YES', false) }}
+			    {{ Form::checkbox('fever', 'SI', false) }}
 			    
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Cabeza:') }}
 				<small id="nameHelp" class="form-text text-muted">Mareos</small>
-			    {{ Form::checkbox('head_dizziness', 'YES', false) }}
+			    {{ Form::checkbox('head_dizziness', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('headache', 'YES', false) }}
+			    {{ Form::checkbox('headache', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('eyes', 'Ojos:') }}
 				<small id="nameHelp" class="form-text text-muted">Vision Borrosa</small>
-			    {{ Form::checkbox('blurry_vision', 'YES', false) }}
+			    {{ Form::checkbox('blurry_vision', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Vision Doble</small>
-			    {{ Form::checkbox('double_vision', 'YES', false) }}
+			    {{ Form::checkbox('double_vision', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Lagrimeo</small>
-			    {{ Form::checkbox('tearing', 'YES', false) }}
+			    {{ Form::checkbox('tearing', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Nariz:') }}
 				<small id="nameHelp" class="form-text text-muted">Sangrado</small>
-			    {{ Form::checkbox('bleeding_nose', 'YES', false) }}
+			    {{ Form::checkbox('bleeding_nose', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Secrecion</small>
-			    {{ Form::checkbox('nose_secretion', 'YES', false) }}
+			    {{ Form::checkbox('nose_secretion', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('eyes', 'Boca:') }}
 				<small id="nameHelp" class="form-text text-muted">Halitosis</small>
-			    {{ Form::checkbox('halitosis', 'YES', false) }}
+			    {{ Form::checkbox('halitosis', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Caries</small>
-			    {{ Form::checkbox('cavities', 'YES', false) }}
+			    {{ Form::checkbox('cavities', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Edentula</small>
-			    {{ Form::checkbox('edentula', 'YES', false) }}
+			    {{ Form::checkbox('edentula', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-3">
 				{{ Form::label('fever', 'Cuello:') }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('neck_pain', 'YES', false) }}
+			    {{ Form::checkbox('neck_pain', 'SI', false) }}
 			    
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('eyes', 'Senos:') }}
 				<small id="nameHelp" class="form-text text-muted">Masas</small>
-			    {{ Form::checkbox('breast_masses', 'YES', false) }}
+			    {{ Form::checkbox('breast_masses', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('breast_pain', 'YES', false) }}
+			    {{ Form::checkbox('breast_pain', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Secrecion</small>
-			    {{ Form::checkbox('breast_secretion', 'YES', false) }}
+			    {{ Form::checkbox('breast_secretion', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-3">
 				{{ Form::label('eyes', 'Pulso:') }}
@@ -144,86 +144,86 @@
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Torax:') }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('torax_pain', 'YES', false) }}
+			    {{ Form::checkbox('torax_pain', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Angustias</small>
-			    {{ Form::checkbox('torax_angst', 'YES', false) }}
+			    {{ Form::checkbox('torax_angst', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-12">
 				{{ Form::label('eyes', 'Corazon:') }}
 				<small id="nameHelp" class="form-text text-muted">Disnea</small>
-			    {{ Form::checkbox('dyspnoa', 'YES', false) }}
+			    {{ Form::checkbox('dyspnoa', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('heart_pain', 'YES', false) }}
+			    {{ Form::checkbox('heart_pain', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Taquicardias</small>
-			    {{ Form::checkbox('tachycardias', 'YES', false) }}
+			    {{ Form::checkbox('tachycardias', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Opresion</small>
-			    {{ Form::checkbox('oppression', 'YES', false) }}
+			    {{ Form::checkbox('oppression', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-12">
 				{{ Form::label('eyes', 'Respiratorio:') }}
 				<small id="nameHelp" class="form-text text-muted">Dific. para Respirar</small>
-			    {{ Form::checkbox('difficulty_breathing', 'YES', false) }}
+			    {{ Form::checkbox('difficulty_breathing', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('breathing_pain', 'YES', false) }}
+			    {{ Form::checkbox('breathing_pain', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Tos</small>
-			    {{ Form::checkbox('cough', 'YES', false) }}
+			    {{ Form::checkbox('cough', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Expectoracion</small>
-			    {{ Form::checkbox('expectoration', 'YES', false) }}
+			    {{ Form::checkbox('expectoration', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('eyes', 'Abdomen:') }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('abdomen_pain', 'YES', false) }}
+			    {{ Form::checkbox('abdomen_pain', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Diarreas</small>
-			    {{ Form::checkbox('diarrhea', 'YES', false) }}
+			    {{ Form::checkbox('diarrhea', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Hernias</small>
-			    {{ Form::checkbox('hernias', 'YES', false) }}
+			    {{ Form::checkbox('hernias', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('eyes', 'Genitales:') }}
 				<small id="nameHelp" class="form-text text-muted">Hombre</small>
-			    {{ Form::checkbox('genitals_man', 'YES', false) }}
+			    {{ Form::checkbox('genitals_man', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Mujer</small>
-			    {{ Form::checkbox('genitals_woman', 'YES', false) }}
+			    {{ Form::checkbox('genitals_woman', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-3">
 				{{ Form::label('eyes', 'Ano:') }}
 				<small id="nameHelp" class="form-text text-muted">Fisura</small>
-			    {{ Form::checkbox('fissure_anus', 'YES', false) }}
+			    {{ Form::checkbox('fissure_anus', 'SI', false) }}
 				
 			</div>
 			<div class="form-group col-md-12">
 				{{ Form::label('eyes', 'Genitourdinario:') }}
 				<small id="nameHelp" class="form-text text-muted">Micciones</small>
-			    {{ Form::checkbox('genital_micturition', 'YES', false) }}
+			    {{ Form::checkbox('genital_micturition', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Anatomia</small>
-			    {{ Form::checkbox('genital_anatomy', 'YES', false) }}
+			    {{ Form::checkbox('genital_anatomy', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Secrecion</small>
-			    {{ Form::checkbox('genital_secretion', 'YES', false) }}
+			    {{ Form::checkbox('genital_secretion', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Ardor</small>
-			    {{ Form::checkbox('genital_burning', 'YES', false) }}
+			    {{ Form::checkbox('genital_burning', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('genital_pain', 'YES', false) }}
+			    {{ Form::checkbox('genital_pain', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-7">
 				{{ Form::label('eyes', 'Extremidades:') }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('pain_limbs', 'YES', false) }}
+			    {{ Form::checkbox('pain_limbs', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Cansancio</small>
-			    {{ Form::checkbox('extremity_fatigue', 'YES', false) }}
+			    {{ Form::checkbox('extremity_fatigue', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Pesadez</small>
-			    {{ Form::checkbox('heaviness_tips', 'YES', false) }}
+			    {{ Form::checkbox('heaviness_tips', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Hinchazon</small>
-			    {{ Form::checkbox('swelling_extremities', 'YES', false) }}
+			    {{ Form::checkbox('swelling_extremities', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('eyes', 'Neurologico:') }}
 				<small id="nameHelp" class="form-text text-muted">Dolor</small>
-			    {{ Form::checkbox('neurological_pain', 'YES', false) }}
+			    {{ Form::checkbox('neurological_pain', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Mareos</small>
-			    {{ Form::checkbox('neurological_dizziness', 'YES', false) }}
+			    {{ Form::checkbox('neurological_dizziness', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Desorientado</small>
-			    {{ Form::checkbox('disorientated', 'YES', false) }}
+			    {{ Form::checkbox('disorientated', 'SI', false) }}
 			</div>
         </div>
       </div>
@@ -286,97 +286,97 @@
 			<div class="form-group col-md-3">
 				{{ Form::label('fever', 'Nariz:') }}
 				<small id="nameHelp" class="form-text text-muted">Fosas Nasales</small>
-			    {{ Form::checkbox('nostrils', 'YES', false) }}
+			    {{ Form::checkbox('nostrils', 'SI', false) }}
 			    
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Boca:') }}
 				<small id="nameHelp" class="form-text text-muted">Simetrica</small>
-			    {{ Form::checkbox('symmetrical_mouth', 'YES', false) }}
+			    {{ Form::checkbox('symmetrical_mouth', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Asimetrica</small>
-			    {{ Form::checkbox('mouth_asymmetry', 'YES', false) }}
+			    {{ Form::checkbox('mouth_asymmetry', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-3">
 				{{ Form::label('fever', 'Senos:') }}
 				<small id="nameHelp" class="form-text text-muted">Simetricos</small>
-			    {{ Form::checkbox('symmetrical_sinuses', 'YES', false) }}
+			    {{ Form::checkbox('symmetrical_sinuses', 'SI', false) }}
 			    
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Torax:') }}
 				<small id="nameHelp" class="form-text text-muted">Simetrico</small>
-			    {{ Form::checkbox('symmetric_thorax', 'YES', false) }}
+			    {{ Form::checkbox('symmetric_thorax', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Asimetrico</small>
-			    {{ Form::checkbox('asymmetric_thorax', 'YES', false) }}
+			    {{ Form::checkbox('asymmetric_thorax', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Corazon:') }}
 				<small id="nameHelp" class="form-text text-muted">RS CS</small>
-			    {{ Form::checkbox('rs_cs', 'YES', false) }}
+			    {{ Form::checkbox('rs_cs', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Soplo</small>
-			    {{ Form::checkbox('soplo', 'YES', false) }}
+			    {{ Form::checkbox('soplo', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Ritmo</small>
-			    {{ Form::checkbox('ritmo', 'YES', false) }}
+			    {{ Form::checkbox('ritmo', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-4">
 				{{ Form::label('hand', 'Respiratorio:') }}
 				<small id="nameHelp" class="form-text text-muted">RS RS</small>
-			    {{ Form::checkbox('rs', 'YES', false) }}
+			    {{ Form::checkbox('rs', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">MV</small>
-			    {{ Form::checkbox('mv', 'YES', false) }}
+			    {{ Form::checkbox('mv', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-7">
 				{{ Form::label('hand', 'Abdomen:') }}
 				<small id="nameHelp" class="form-text text-muted">Globoso</small>
-			    {{ Form::checkbox('globose', 'YES', false) }}
+			    {{ Form::checkbox('globose', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Plano</small>
-			    {{ Form::checkbox('flat', 'YES', false) }}
+			    {{ Form::checkbox('flat', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Rshas</small>
-			    {{ Form::checkbox('rshas', 'YES', false) }}
+			    {{ Form::checkbox('rshas', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Blando</small>
-			    {{ Form::checkbox('soft', 'YES', false) }}
+			    {{ Form::checkbox('soft', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Doloroso</small>
-			    {{ Form::checkbox('painful', 'YES', false) }}
+			    {{ Form::checkbox('painful', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-5">
 				{{ Form::label('hand', 'Genitales:') }}
 				<small id="nameHelp" class="form-text text-muted">Masculinos</small>
-			    {{ Form::checkbox('male_genitals', 'YES', false) }}
+			    {{ Form::checkbox('male_genitals', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Femeninos</small>
-			    {{ Form::checkbox('female_genitals', 'YES', false) }}
+			    {{ Form::checkbox('female_genitals', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-3">
 				{{ Form::label('hand', 'Ano:') }}
 				<small id="nameHelp" class="form-text text-muted">Conducto Anal</small>
-			    {{ Form::checkbox('anal_canal', 'YES', false) }}
+			    {{ Form::checkbox('anal_canal', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-9">
 				{{ Form::label('hand', 'Extremidades:') }}
 				<small id="nameHelp" class="form-text text-muted">Asimetricas</small>
-			    {{ Form::checkbox('asymmetric_tips', 'YES', false) }}
+			    {{ Form::checkbox('asymmetric_tips', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Simetricas</small>
-			    {{ Form::checkbox('symmetric_tips', 'YES', false) }}
+			    {{ Form::checkbox('symmetric_tips', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Eutroficas</small>
-			    {{ Form::checkbox('eutrophic', 'YES', false) }}
+			    {{ Form::checkbox('eutrophic', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Atroficas</small>
-			    {{ Form::checkbox('atrophied', 'YES', false) }}
+			    {{ Form::checkbox('atrophied', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Varices</small>
-			    {{ Form::checkbox('varicose_veins', 'YES', false) }}
+			    {{ Form::checkbox('varicose_veins', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Edema</small>
-			    {{ Form::checkbox('edema', 'YES', false) }}
+			    {{ Form::checkbox('edema', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-12">
 				{{ Form::label('hand', 'Neurologico:') }}
 				<small id="nameHelp" class="form-text text-muted">Vigil</small>
-			    {{ Form::checkbox('vigil', 'YES', false) }}
+			    {{ Form::checkbox('vigil', 'SI', false) }}
 				<small id="nameHelp" class="form-text text-muted">Orientado</small>
-			    {{ Form::checkbox('oriented', 'YES', false) }}
+			    {{ Form::checkbox('oriented', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Fuer. Muscular</small>
-			    {{ Form::checkbox('muscular_strength', 'YES', false) }}
+			    {{ Form::checkbox('muscular_strength', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Lenguaje</small>
-			    {{ Form::checkbox('language', 'YES', false) }}
+			    {{ Form::checkbox('language', 'SI', false) }}
 			    <small id="nameHelp" class="form-text text-muted">Reflejos</small>
-			    {{ Form::checkbox('reflexes', 'YES', false) }}
+			    {{ Form::checkbox('reflexes', 'SI', false) }}
 			</div>
 			<div class="form-group col-md-12">
 				{{ Form::label('hand', 'Diagnosticos:') }}
