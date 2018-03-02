@@ -39,6 +39,7 @@
 @section('scripts')
 <script type="text/javascript">
 $(document).ready(function(){
+  $('#people').select2();
 	$.fn.datepicker.dates['es'] = {
         days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
         daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],

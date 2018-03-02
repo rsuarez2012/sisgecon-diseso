@@ -15,6 +15,7 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('dependency_id')->unsigned();
             $table->string('dni', 10)->unique();
             $table->string('first_name', 50);
             $table->string('last_name', 50);

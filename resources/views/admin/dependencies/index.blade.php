@@ -14,7 +14,7 @@
                 	<!--<button  class="btn btn-primary btn-sm pull-right">Nuevo</button>-->
 
                 </div>
-                <div class="body">
+                <div class="panel-body">
                 	
             		<table class="table">
 						<thead>
@@ -29,7 +29,11 @@
 							<tr>
 								<td>{{ $dependency->id }}</td>
 								<td>{{ $dependency->dependency }}</td> 
-								<td></td>
+								<td>
+									<a href="{{ route('dependencias.show', $dependency->id) }}" class="btn btn-info btn-sm">Ver</a>
+									<a href="{{ route('dependencias.edit', $dependency->id) }}" class="btn btn-success btn-sm">Editar</a>
+									<a href="{{ route('dependencias.destroy', $dependency->id) }}" class="btn btn-danger btn-sm">Editar</a>
+								</td>
 							</tr>
 						@endforeach							
 						</tbody>

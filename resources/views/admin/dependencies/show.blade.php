@@ -5,7 +5,11 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-            <h4>Dependencia</h4>
+        <b>Dependencia</b>
+        <a class="pull-right" href="{{ route('dependencias.index') }}">
+          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+          Regresar
+        </a>
       </div>
 
         <table class="table">

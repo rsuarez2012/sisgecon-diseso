@@ -12,7 +12,7 @@ class Dependency extends Model
     ];
     public function people()
     {
-    	return $this->hasMany('App\People');
+    	return $this->hasMany('App\People::class', 'dependency_id');
     }
     public function getInfoAttribute()
 	{

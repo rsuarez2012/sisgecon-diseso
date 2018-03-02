@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\History;
 use App\People;
+use App\Dependency;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class HistoryController extends Controller
@@ -54,8 +55,10 @@ class HistoryController extends Controller
     public function show($id)
     {
         $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $dependencies = Dependency::orderBy('id', 'ASC')->get()->pluck('dependency', 'id');
         $history = History::findOrFail($id);
-        //dd($people);
+        
+        //dd($pru);
         return view('admin.histories.show', compact('history', 'peoples', 'options'));
     }
 
