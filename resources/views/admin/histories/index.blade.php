@@ -22,7 +22,7 @@
 								<th>Id</th>
 								<th>Numero de Historia</th>
 								<th>Titular</th>
-								
+								<th>Dependencia</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
@@ -32,6 +32,7 @@
 								<td>{{ $history->id }}</td>
 								<td>{{ $history->people->history }}</td>
 								<td>{{ $history->people->full_name }}</td> 
+								<td>{{ $history->people->dependencies->info }}</td>								
 								<td>
 									<a href="{{ route('historias.show', $history->id) }}" class="btn btn-info btn-sm">Ver</a>
 									<a href="{{ route('historias.edit', $history->id) }}" class="btn btn-success btn-sm">Editar</a>
