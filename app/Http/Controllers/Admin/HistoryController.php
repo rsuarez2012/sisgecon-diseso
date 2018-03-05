@@ -84,9 +84,11 @@ class HistoryController extends Controller
      * @param  \App\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, History $history)
+    public function update(Request $request, $id)
     {
-        //
+        $history = History::findOrFail($id);
+        $history->fill($request->all())->save();
+        return redirect()->route('historias.show', $history->id)->with('info', 'Historia Editada con Exito.!');
     }
 
     /**
