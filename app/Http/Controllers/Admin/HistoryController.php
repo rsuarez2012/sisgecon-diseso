@@ -7,6 +7,9 @@ use App\People;
 use App\Dependency;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\HistoryStoreRequest;
+use App\Http\Requests\HistoryUpdateRequest;
+
 class HistoryController extends Controller
 {
     /**
@@ -38,7 +41,7 @@ class HistoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HistoryStoreRequest $request)
     {
         //$da = $request->all();
         //dd($da);
@@ -70,11 +73,12 @@ class HistoryController extends Controller
      */
     public function edit($id)
     {
-        $options = ['SI' => 'SI', 'NO' => 'NO'];
+        
         $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
         $history = History::findOrFail($id);
-        //dd($people);
-        return view('admin.histories.edit', compact('history', 'peoples', 'options'));
+        
+        
+        return view('admin.histories.edit', compact('history', 'peoples'));
     }
 
     /**
@@ -84,9 +88,11 @@ class HistoryController extends Controller
      * @param  \App\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HistoryUpdateRequest $request, $id)
     {
         $history = History::findOrFail($id);
+        //$history = History::find($id)->update($request->all());
+        //$history::find($id)->update($request->all());
         $history->fill($request->all())->save();
         return redirect()->route('historias.show', $history->id)->with('info', 'Historia Editada con Exito.!');
     }
