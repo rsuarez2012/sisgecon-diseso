@@ -104,16 +104,16 @@
                           </div>
                           <div class="panel-body">
                             <div class="col-md-3">
-                              Alcohol: {{ $history->alcohol }}
+                              Alcohol: @if($history->alcohol == 1) SI @else NO @endif
                             </div>
                             <div class="col-md-3">
-                              Cigarrillos: {{ $history->cigarettes }}
+                              Cigarrillos: @if($history->cigarettes == 1) SI @else NO @endif
                             </div>
                             <div class="col-md-3">
-                              Cafe: {{ $history->cofe }}
+                              Cafe: @if($history->cofe== 1) SI @else NO @endif
                             </div>
                             <div class="col-md-3">
-                              Tabaco: {{ $history->tobacco }}
+                              Tabaco: @if($history->tobacco == 1) SI @else NO @endif
                             </div>
                           </div>
                         </div>                      
@@ -130,47 +130,47 @@
                                 <li>
                                   <b>General</b>
                                   <ul>
-                                    <li>Fiebre: ({{ $history->fever }})</li>
+                                    <li>Fiebre: (@if($history->fever == 1) SI @else NO @endif)</li>
                                   </ul> 
                                 </li>
                                 <li>
                                   <b>Nariz</b>
                                   <ul>
-                                    <li>Sangrado: ({{ $history->bleeding_nose }})</li>
-                                    <li>Secreción: ({{ $history->nose_secretion }})</li>
+                                    <li>Sangrado: (@if($history->bleeding_nose == 1) SI @else NO @endif)</li>
+                                    <li>Secreción: (@if($history->nose_secretion == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Senos</b>
                                   <ul>
-                                    <li>Masas: ({{ $history->breast_masses }})</li>
-                                    <li>Dolor: ({{ $history->breast_pain }})</li>
-                                    <li>Secreción: ({{ $history->breast_secretion }})</li>
+                                    <li>Masas: (@if($history->breast_masses == 1) SI @else NO @endif)</li>
+                                    <li>Dolor: (@if($history->breast_pain == 1) SI @else NO @endif)</li>
+                                    <li>Secreción: (@if($history->breast_secretion == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Corazon</b>
                                   <ul>
-                                    <li>Disnea: ({{ $history->dyspnoa }})</li>
-                                    <li>Dolor: ({{ $history->heart_pain }})</li>
-                                    <li>Taquicardia: ({{ $history->tachycardias }})</li>
-                                    <li>Opresión: ({{ $history->oppression }})</li>
+                                    <li>Disnea: (@if($history->dyspnoa == 1) SI @else NO @endif)</li>
+                                    <li>Dolor: (@if($history->heart_pain == 1) SI @else NO @endif)</li>
+                                    <li>Taquicardia: (@if($history->tachycardias == 1) SI @else NO @endif)</li>
+                                    <li>Opresión: (@if($history->oppression == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Genitales</b>
                                   <ul>
-                                    <li>Hombre: ({{ $history->genitals_man }})</li>
-                                    <li>Mujer: ({{ $history->genitals_woman }})</li>
+                                    <li>Hombre: (@if($history->genitals_man == 1) SI @else NO @endif)</li>
+                                    <li>Mujer: (@if($history->genitals_woman == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Extremidades</b>
                                   <ul>
-                                    <li>Dolor: ({{ $history->pain_limbs }})</li>
-                                    <li>Cansancio: ({{ $history->extremity_fatigue }})</li>
-                                    <li>pesadez: ({{ $history->heaviness_tips }})</li>
-                                    <li>Hinchazón: ({{ $history->swelling_extremities }})</li>
+                                    <li>Dolor: (@if($history->pain_limbs == 1) SI @else NO @endif)</li>
+                                    <li>Cansancio: (@if($history->extremity_fatigue == 1) SI @else NO @endif)</li>
+                                    <li>pesadez: (@if($history->heaviness_tips == 1) SI @else NO @endif)</li>
+                                    <li>Hinchazón: (@if($history->swelling_extremities == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                               </ul>                              
@@ -181,16 +181,16 @@
                                 <li>
                                   <b>Cabeza</b>
                                   <ul>
-                                    <li>Mareos: ({{ $history->head_dizziness }})</li>
-                                    <li>Dolor: ({{ $history->headache }})</li>           
+                                    <li>Mareos: (@if($history->head_dizziness == 1) SI @else NO @endif)</li>
+                                    <li>Dolor: (@if($history->headache == 1) SI @else NO @endif)</li>           
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Boca</b>
                                   <ul>
-                                    <li>Halitosis: ({{ $history->halitosis }})</li>
-                                    <li>Caries: ({{ $history->cavities }})</li>
-                                    <li>Edentula: ({{ $history->edentula }})</li>
+                                    <li>Halitosis: (@if($history->halitosis == 1) SI @else NO @endif)</li>
+                                    <li>Caries: (@if($history->cavities == 1) SI @else NO @endif)</li>
+                                    <li>Edentula: (@if($history->edentula == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
@@ -199,24 +199,24 @@
                                 <li>
                                   <b>Respiratorio</b>
                                   <ul>
-                                    <li>Dificultad para Respirar: ({{ $history->difficulty_breathing }})</li>
-                                    <li>Dolor: ({{ $history->breathing_pain }})</li>
-                                    <li>Tos: ({{ $history->cough }})</li>
-                                    <li>Expectoración: ({{ $history->expectoration }})</li>
+                                    <li>Dificultad para Respirar: (@if($history->difficulty_breathing == 1) SI @else NO @endif)</li>
+                                    <li>Dolor: (@if($history->breathing_pain == 1) SI @else NO @endif)</li>
+                                    <li>Tos: (@if($history->cough == 1) SI @else NO @endif)</li>
+                                    <li>Expectoración: (@if($history->expectoration == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Ano</b>
                                   <ul>
-                                    <li>Fisura: ({{ $history->fissure_anus }})</li>
+                                    <li>Fisura: (@if($history->fissure_anus == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Neurologico</b>
                                   <ul>
-                                    <li>Dolor: ({{ $history->neurological_pain }})</li>
-                                    <li>Mareos: ({{ $history->neurological_dizziness }})</li>
-                                    <li>Desorientado: ({{ $history->disorientated }})</li>
+                                    <li>Dolor: (@if($history->neurological_pain == 1) SI @else NO @endif)</li>
+                                    <li>Mareos: (@if($history->neurological_dizziness == 1) SI @else NO @endif)</li>
+                                    <li>Desorientado: (@if($history->disorientated == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                               </ul>
@@ -227,40 +227,40 @@
                                 <li>
                                   <b>Ojos</b>
                                   <ul>
-                                    <li>Vision Borrosa: ({{ $history->blurry_vision }})</li>
-                                    <li>Vision Doble: ({{ $history->double_vision }})</li>
-                                    <li>Lagrimeo: ({{ $history->tearing }})</li>
+                                    <li>Vision Borrosa: (@if($history->blurry_vision == 1) SI @else NO @endif)</li>
+                                    <li>Vision Doble: (@if($history->double_vision == 1) SI @else NO @endif)</li>
+                                    <li>Lagrimeo: (@if($history->tearing == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Cuello</b>
                                   <ul>
-                                    <li>Dolor: ({{ $history->neck_pain }})</li>
+                                    <li>Dolor: (@if($history->neck_pain == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Torax</b>
                                   <ul>
-                                    <li>Dolor: ({{ $history->torax_pain }})</li>
-                                    <li>Angustias: ({{ $history->torax_angst }})</li>
+                                    <li>Dolor: (@if($history->torax_pain == 1) SI @else NO @endif)</li>
+                                    <li>Angustias: (@if($history->torax_angst == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Abdomen</b>
                                   <ul>
-                                    <li>Dolor: ({{ $history->abdomen_pain }})</li>
-                                    <li>Diarrea: ({{ $history->diarrhea }})</li>
-                                    <li>Hernias: ({{ $history->hernias }})</li>
+                                    <li>Dolor: (@if($history->abdomen_pain == 1) SI @else NO @endif)</li>
+                                    <li>Diarrea: (@if($history->diarrhea == 1) SI @else NO @endif)</li>
+                                    <li>Hernias: (@if($history->hernias == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                                 <li>
                                   <b>Genitourinario</b>
                                   <ul>
-                                    <li>Micciones: ({{ $history->genital_micturition }})</li>
-                                    <li>Anatomia: ({{ $history->genital_anatomy }})</li>
-                                    <li>Secreción: ({{ $history->genital_secretion }})</li>
-                                    <li>Ardor: ({{ $history->genital_burning }})</li>
-                                    <li>Dolor: ({{ $history->genital_pain }})</li>
+                                    <li>Micciones: (@if($history->genital_micturition == 1) SI @else NO @endif)</li>
+                                    <li>Anatomia: (@if($history->genital_anatomy == 1) SI @else NO @endif)</li>
+                                    <li>Secreción: (@if($history->genital_secretion == 1) SI @else NO @endif)</li>
+                                    <li>Ardor: (@if($history->genital_burning == 1) SI @else NO @endif)</li>
+                                    <li>Dolor: (@if($history->genital_pain == 1) SI @else NO @endif)</li>
                                   </ul>
                                 </li>
                               </ul>
@@ -381,35 +381,35 @@
                                     <li>
                                       <b>Nariz</b>
                                       <ul>
-                                        <li>Fozas Nazales: ({{ $history->nostrils }})</li>
+                                        <li>Fozas Nazales: (@if($history->nostrils == 1) SI @else NO @endif)</li>
                                       </ul> 
                                     </li>
                                     <li>
                                       <b>Torax</b>
                                       <ul>
-                                        <li>Simetrico: ({{ $history->symmetric_thorax }})</li>
-                                        <li>Asimetrico: ({{ $history->asymmetric_thorax }})</li>
+                                        <li>Simetrico: (@if($history->symmetric_thorax == 1) SI @else NO @endif)</li>
+                                        <li>Asimetrico: (@if($history->asymmetric_thorax == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Abdomen</b>
                                       <ul>
-                                        <li>Globoso: ({{ $history->globose }})</li>
-                                        <li>Plano: ({{ $history->flat }})</li>
-                                        <li>Rshas: ({{ $history->rshas }})</li>
-                                        <li>Blando: ({{ $history->soft }})</li>
-                                        <li>Doloroso: ({{ $history->painful }})</li>
+                                        <li>Globoso: (@if($history->globose == 1) SI @else NO @endif)</li>
+                                        <li>Plano: (@if($history->flat == 1) SI @else NO @endif)</li>
+                                        <li>Rshas: (@if($history->rshas == 1) SI @else NO @endif)</li>
+                                        <li>Blando: (@if($history->soft == 1) SI @else NO @endif)</li>
+                                        <li>Doloroso: (@if($history->painful == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Extremidades</b>
                                       <ul>
-                                        <li>Asimetricas: ({{ $history->asymmetric_tips }})</li>
-                                        <li>Simetricas: ({{ $history->symmetrical_tips }})</li>
-                                        <li>Eutroficas: ({{ $history->eutrophic }})</li>
-                                        <li>Atroficas: ({{ $history->atrophied }})</li>
-                                        <li>Varices: ({{ $history->varicose_veins }})</li>
-                                        <li>Edema: ({{ $history->edema }})</li>
+                                        <li>Asimetricas: (@if($history->asymmetric_tips == 1) SI @else NO @endif)</li>
+                                        <li>Simetricas: (@if($history->symmetrical_tips == 1) SI @else NO @endif)</li>
+                                        <li>Eutroficas: (@if($history->eutrophic == 1) SI @else NO @endif)</li>
+                                        <li>Atroficas: (@if($history->atrophied == 1) SI @else NO @endif)</li>
+                                        <li>Varices: (@if($history->varicose_veins == 1) SI @else NO @endif)</li>
+                                        <li>Edema: (@if($history->edema == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                   </ul>                              
@@ -420,33 +420,33 @@
                                     <li>
                                       <b>Boca</b>
                                       <ul>
-                                        <li>Simetrica: ({{ $history->symmetrical_mouth }})</li>
-                                        <li>Asimetrica: ({{ $history->mouth_asymmetry }})</li>           
+                                        <li>Simetrica: (@if($history->symmetrical_mouth == 1) SI @else NO @endif)</li>
+                                        <li>Asimetrica: (@if($history->mouth_asymmetry == 1) SI @else NO @endif)</li>           
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Corazon</b>
                                       <ul>
-                                        <li>RS CS: ({{ $history->rs }})</li>
-                                        <li>Soplo: ({{ $history->soplo }})</li>
-                                        <li>Ritmo: ({{ $history->ritmo }})</li>
+                                        <li>RS CS: (@if($history->rs == 1) SI @else NO @endif)</li>
+                                        <li>Soplo: (@if($history->soplo == 1) SI @else NO @endif)</li>
+                                        <li>Ritmo: (@if($history->ritmo == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Genitales</b>
                                       <ul>
-                                        <li>Masculinos: ({{ $history->male_genitals }})</li>
-                                        <li>Femeninos: ({{ $history->female_genitals }})</li>
+                                        <li>Masculinos: (@if($history->male_genitals == 1) SI @else NO @endif)</li>
+                                        <li>Femeninos: (@if($history->female_genitals == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Neurologico</b>
                                       <ul>
-                                        <li>Vigil: ({{ $history->vigil }})</li>
-                                        <li>Orientado: ({{ $history->oriented }})</li>
-                                        <li>Fuerza Muscular: ({{ $history->muscular_strength }})</li>
-                                        <li>Lenguaje: ({{ $history->language }})</li>
-                                        <li>Reflejos: ({{ $history->reflexes }})</li>
+                                        <li>Vigil: (@if($history->vigil == 1) SI @else NO @endif)</li>
+                                        <li>Orientado: (@if($history->oriented == 1) SI @else NO @endif)</li>
+                                        <li>Fuerza Muscular: (@if($history->muscular_strength == 1) SI @else NO @endif)</li>
+                                        <li>Lenguaje: (@if($history->language == 1) SI @else NO @endif)</li>
+                                        <li>Reflejos: (@if($history->reflexes == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                   </ul>
@@ -457,20 +457,20 @@
                                     <li>
                                       <b>Senos</b>
                                       <ul>
-                                        <li>Simetricos: ({{ $history->symmetrical_sinuses }})</li>
+                                        <li>Simetricos: (@if($history->symmetrical_sinuses == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Respiratorio</b>
                                       <ul>
-                                        <li>RS RS: ({{ $history->rs }})</li>
-                                        <li>MV: ({{ $history->mv }})</li>
+                                        <li>RS RS: (@if($history->rs == 1) SI @else NO @endif)</li>
+                                        <li>MV: (@if($history->mv == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>
                                     <li>
                                       <b>Ano</b>
                                       <ul>
-                                        <li>Conducto Anal: ({{ $history->anal_canal }})</li>
+                                        <li>Conducto Anal: (@if($history->anal_canal == 1) SI @else NO @endif)</li>
                                       </ul>
                                     </li>                                      
                                   </ul>

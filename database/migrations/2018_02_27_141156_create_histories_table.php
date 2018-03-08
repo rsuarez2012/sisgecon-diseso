@@ -25,7 +25,7 @@ class CreateHistoriesTable extends Migration
             $table->string('dad_history');//antecendetes padre
             $table->string('sons_history');//antecendetes hijos
             $table->string('brot_history');//antecendetes hermanos
-            $table->text('gynecology');//antecendetes ginecologicos
+            $table->text('gynecology')->nullable();//antecendetes ginecologicos
             //habitos psicobiologicos
             $table->enum('alcohol', ['1', '0'])->default('0');//habitos alcohol 
             $table->enum('cigarettes', ['1', '0'])->default('0');//habitos cigarros
@@ -100,7 +100,7 @@ class CreateHistoriesTable extends Migration
             $table->enum('symmetrical_neck', ['1', '0'])->default('0');
             $table->enum('asymmetrical_neck', ['1', '0'])->default('0');
             $table->enum('symmetrical_sinuses', ['1', '0'])->default('0');
-            $table->string('pulses');//OJO ELIMINAR
+            $table->string('pulses')->nullable();//OJO ELIMINAR
             $table->enum('asymmetric_thorax', ['1', '0'])->default('0');
             $table->enum('symmetric_thorax', ['1', '0'])->default('0');
             $table->enum('rs_cs', ['1', '0'])->default('0');

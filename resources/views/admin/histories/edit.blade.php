@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 col-md-offset-0">
+		<div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                	<b class="sub-header">Editar Historia</b>
+                	<b class="sub-header">Editar Historia: <span class="label label-success">{{ $history->people->history }}</span></b>
                 	
                 </div>
 				<br>
