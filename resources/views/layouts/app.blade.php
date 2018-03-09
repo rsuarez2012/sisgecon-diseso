@@ -55,7 +55,18 @@
                             <li><a href="{{ route('titulares.index') }}">Titulares</a></li>
                             <li><a href="{{ route('beneficiarios.index') }}">Beneficiarios</a></li>
                             <li><a href="{{ route('dependencias.index') }}">Dependencias</a></li>
-                            <li><a href="{{ route('historias.index') }}">Historias Medica</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Historias <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('historias.index') }}">Historias Medica</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>

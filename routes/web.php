@@ -40,6 +40,8 @@ Route::resource('dependencias', 'Admin\DependencyController');
 //historias
 Route::resource('historias', 'Admin\HistoryController');
 
+//historia Ocupacional
+Route::resource('historia_ocupacional', 'Admin\OccupationalHistoryController');
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
 /*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/
