@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\occupationalHistory;
-
+use App\People;
 
 class OccupationalHistoryController extends Controller
 {
@@ -26,7 +26,8 @@ class OccupationalHistoryController extends Controller
      */
     public function create()
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        return view('admin.occupational_histories.create', compact('peoples'));
     }
 
     /**

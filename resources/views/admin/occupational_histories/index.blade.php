@@ -27,7 +27,7 @@
 							</tr>
 						</thead>
 						<tbody>	
-							@foreach($occupationals as $occupational)
+							@foreach($occupatinals as $occupational)
 							<tr>
 								<td>{{ $occupational->id }}</td>
 								<td>{{ $occupational->people->history }}</td>
@@ -40,7 +40,7 @@
 								</td>
 								
 							</tr>
-							{{--end foreach--}}					
+							@endforeach					
 						</tbody>
 						
 					</table>						
