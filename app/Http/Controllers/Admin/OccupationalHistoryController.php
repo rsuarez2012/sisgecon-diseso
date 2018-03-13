@@ -38,8 +38,11 @@ class OccupationalHistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $occupational = occupationalHistory::create($request->all());
+        //dd($occupational);
+        return redirect()->route('historia_ocupacional.edit', $occupational->id)->with('info', 'Historia Ocupacional Almacenado con Exito.!');
     }
+ 
 
     /**
      * Display the specified resource.
@@ -47,7 +50,7 @@ class OccupationalHistoryController extends Controller
      * @param  \App\occupationalHistory  $occupationalHistory
      * @return \Illuminate\Http\Response
      */
-    public function show(occupationalHistory $occupationalHistory)
+    public function show($id)
     {
         //
     }
@@ -58,10 +61,13 @@ class OccupationalHistoryController extends Controller
      * @param  \App\occupationalHistory  $occupationalHistory
      * @return \Illuminate\Http\Response
      */
-    public function edit(occupationalHistory $occupationalHistory)
+    public function edit($id)
     {
-        //
-    }
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $occupational = occupationalHistory::findOrFail($id);
+        
+        
+        return view('admin.occupational_histories.edit', compact('occupational', 'peoples'));    }
 
     /**
      * Update the specified resource in storage.
@@ -70,7 +76,7 @@ class OccupationalHistoryController extends Controller
      * @param  \App\occupationalHistory  $occupationalHistory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, occupationalHistory $occupationalHistory)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -81,7 +87,7 @@ class OccupationalHistoryController extends Controller
      * @param  \App\occupationalHistory  $occupationalHistory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(occupationalHistory $occupationalHistory)
+    public function destroy($id)
     {
         //
     }

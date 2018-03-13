@@ -7,16 +7,16 @@
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                	<b class="sub-header">Editar Historia: <span class="label label-success">{{ $history->people->history }}</span></b>
+                	<b class="sub-header">Editar Historia: <span class="label label-success">{{ $occupational->people->history }}</span></b>
                 	
                 </div>
 				<br>
 				<div class="panel-body">
-                    {!! Form::model($history, ['route' => ['historias.update', $history->id], 'method' => 'PUT'])!!}
+                    {!! Form::model($occupational, ['route' => ['historia_ocupacional.update', $occupational->id], 'method' => 'PUT'])!!}
 					<input type="hidden" name="id" value="{{-- $person->id --}}">
 
                         
-                        @include('admin.histories.partials.form')
+                        @include('admin.occupational_histories.partials.form')
 
                     {!! Form::close() !!}
 				</div>

@@ -311,149 +311,204 @@
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Posiciones:</small><br>
 	    						<small id="nameHelp" class="form-text text-muted">Sedestación</small>
-			    				{{ Form::checkbox('noise', 1 ) }}<br>
+			    				{{ Form::checkbox('sitting', 1 ) }}<br>
 			    				<small id="nameHelp" class="form-text text-muted">Prolongada</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('prolonged', 1 ) }}
 	    					</td>
 	    					<td>
-	    						<small id="nameHelp" class="form-text text-muted">Características Silla:</small><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6']) }}
+			    				{{ Form::text('characteristic_chair', null, ['class'=>'col-md-12', 'placeholder' => 'Características Silla']) }}
 	    					</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('positions_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('positions_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('positions_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">Bipedestación prolongada</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('standing', 1 ) }}
 	        				</td>
 	    					<td></td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('standing_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('standing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('standing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">De Rodillas</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('knees', 1 ) }}
 	        				</td>
 	    					<td></td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('knees_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('knees_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('knees_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">En Cunclillas</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('cunnels', 1 ) }}
 	        				</td>
 	    					<td></td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('cunnels_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('cunnels_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('cunnels_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">Manipulación manual de carga<br>levantamiento</small><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Peso']) }} :Kg
+			    				{{ Form::text('load', null, ['class'=>'col-md-12', 'placeholder'=>'Peso/Kg']) }}
 	        				</td>
 	    					<td>
-	    						<small id="nameHelp" class="form-text text-muted">Tipo de Objeto:</small><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6']) }}<br><br>
-			    				<small id="nameHelp" class="form-text text-muted">Frecuencia de Levantamiento:</small><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6']) }}
+	    						{{ Form::text('load_type', null, ['class'=>'col-md-12', 'placeholder' => 'Tipo de Objeto']) }}<br><br>
+			    				
+			    				{{ Form::text('load_frecuncy', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuencia Levantamiento']) }}
 	    					</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('load_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('load_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('load_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">Traslado Manual</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('transfer', 1 ) }}
 	        				</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Tipo de Objeto']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Peso/kg']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Distancia Aprox/mts']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuencia']) }}
+	    						{{ Form::text('transfer_type', null, ['class'=>'col-md-12', 'placeholder' => 'Tipo de Objeto']) }}<br><br>
+			    				{{ Form::text('transfer_weight', null, ['class'=>'col-md-12', 'placeholder' => 'Peso/kg']) }}<br><br>
+			    				{{ Form::text('transfer_distance', null, ['class'=>'col-md-12', 'placeholder' => 'Distancia Aprox/mts']) }}<br><br>
+			    				{{ Form::text('transfer_frecuncy', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuencia']) }}
 	    					</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('transfer_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('transfer_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('transfer_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">Halar o Empujar</small><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Peso']) }} :Kg
+			    				{{ Form::text('push', null, ['class'=>'col-md-6', 'placeholder'=>'Peso']) }} :Kg
 	        				</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Tipo de Objeto']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Peso/kg']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Distancia Aprox/mts']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuencia']) }}
+	    						{{ Form::text('push_type', null, ['class'=>'col-md-12', 'placeholder' => 'Tipo de Objeto']) }}<br><br>
+			    				{{ Form::text('push_weight', null, ['class'=>'col-md-12', 'placeholder' => 'Peso/kg']) }}<br><br>
+			    				{{ Form::text('push_distance', null, ['class'=>'col-md-12', 'placeholder' => 'Distancia Aprox/mts']) }}<br><br>
+			    				{{ Form::text('push_frecuncy', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuencia']) }}
 	    					</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('push_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('push_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('push_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<td>
 	        					<small id="nameHelp" class="form-text text-muted">Movimientos Repetitivos</small>
-			    				{{ Form::checkbox('noise', 1 ) }}
+			    				{{ Form::checkbox('moves', 1 ) }}
 	        				</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Parte del Cuerpo']) }}<br><br>
-			    				{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuncia']) }}
+	    						{{ Form::text('moves_body', null, ['class'=>'col-md-12', 'placeholder' => 'Parte del Cuerpo']) }}<br><br>
+			    				{{ Form::text('moves_frecuncy', null, ['class'=>'col-md-12', 'placeholder' => 'Frecuncia']) }}
 	    					</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						{{ Form::text('moves_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('moves_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('moves_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<th class="active">Biológicos</th>
-	    					<td>12</td>
-	    					<td>12</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						<small id="nameHelp" class="form-text text-muted">Orgánicos</small>
+			    				{{ Form::checkbox('organic', 1 ) }}<br>
+			    				<small id="nameHelp" class="form-text text-muted">Inorgánicos</small>
+			    				{{ Form::checkbox('inorganic', 1 ) }}
+	    					</td>
+	    					<td>
+	    						<small id="nameHelp" class="form-text text-muted">Exp. a Animales/insectos</small>
+			    				{{ Form::checkbox('animals', 1 ) }}<br>
+			    				<small id="nameHelp" class="form-text text-muted">Contactos con Desechos</small>
+			    				{{ Form::checkbox('waste', 1 ) }}
+	    					</td>
+	    					<td>
+	    						{{ Form::text('biologic_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('biologic_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('biologic_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<th class="active">Mecánicos</th>
-	    					<td>12</td>
-	    					<td>12</td>
 	    					<td>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
-	    						{{ Form::text('no_ionizing_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
-	    						{{ Form::text('no_ionizing_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
+	    						<small id="nameHelp" class="form-text text-muted">Trbajo en Altura</small>
+			    				{{ Form::checkbox('work', 1 ) }}<br>
+			    				<small id="nameHelp" class="form-text text-muted">Equipos sin Guarda</small>
+			    				{{ Form::checkbox('guard', 1 ) }}<br>
+			    				<small id="nameHelp" class="form-text text-muted">otros</small>
+			    				{{ Form::checkbox('others', 1 ) }}
+	    					</td>
+	    					<td></td>
+	    					<td>
+	    						{{ Form::text('work_biologic_hours', null, ['class'=>'col-md-6', 'placeholder'=>'Horas/dia']) }}<br><br>
+	    						{{ Form::text('work_biologic_moses', null, ['class'=>'col-md-6', 'placeholder'=>'Meses']) }}<br><br>
+	    						{{ Form::text('work_biologic_year', null, ['class'=>'col-md-6', 'placeholder'=>'Años']) }}
 	    					</td>
 	        			</tr>
 	        			<tr>
 	        				<th class="active">Otros</th>
-	    					<td>12</td>
-	    					<td>12</td>
 	    					<td>
-	    						
+	    						{{ Form::text('other_type', null, ['class'=>'col-md-12', 'placeholder'=>'Otro Agente']) }}
 	    					</td>
+	    					<td>
+	    						{{ Form::text('other_description', null, ['class'=>'col-md-12', 'placeholder'=>'Descripción']) }}
+	    					</td>
+	    					<td>
+	    						{{ Form::text('other_time', null, ['class'=>'col-md-6', 'placeholder'=>'Tiempo']) }}
+	    					</td>
+	        			</tr>
+	        			<tr>
+	        				<th colspan="4">Preguntas Adicionales</th>
+	        			</tr>
+	        			<tr>
+	        				<td colspan="2">
+								<small id="nameHelp" class="form-text text-muted">Ha sufrido Accidentes de trabajo?</small>
+			    				{{ Form::checkbox('accident', 1 ) }}
+	        				</td>
+	        				<td colspan="2">
+	        					{{ Form::text('body_part', null, ['class'=>'col-md-12', 'placeholder'=>'En que parte del cuerpo se lesiono?']) }}
+	        				</td>
+	        			</tr>
+	        			<tr>
+	        				<td colspan="2">
+			    				{{ Form::date('accident_date', null, ['class'=>'col-md-12', 'placeholder' => 'Fecha del Accidente?', 'id' => 'accident_date']) }}
+	        				</td>
+	        				<td colspan="2">
+	        					{{ Form::text('aftermath', null, ['class'=>'col-md-12', 'placeholder'=>'Dejo Alguna secuela el accidente?']) }}
+	        				</td>
+	        			</tr>
+	        			<tr>
+	        				<td colspan="2">
+								<small id="nameHelp" class="form-text text-muted">Ha padecido o padece de enfermedad ocupacional?</small>
+			    				{{ Form::checkbox('occupational_disease', 1 ) }}
+	        				</td>
+	        				<td colspan="2">
+								<small id="nameHelp" class="form-text text-muted">Fue certificada por el INPSASEL?</small>
+			    				{{ Form::checkbox('inpsasel', 1 ) }}
+	        				</td>
+	        			</tr>
+	        			<tr>
+	        				<td colspan="4">
+								<small id="nameHelp" class="form-text text-muted">Cambia de trabajo con frecuencia?</small>
+			    				{{ Form::checkbox('change_work', 1 ) }}
+	        				</td>
 	        			</tr>
         			</tbody>        			
         		</table>

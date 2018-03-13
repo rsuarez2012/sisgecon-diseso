@@ -101,6 +101,16 @@ $(document).ready(function(){
       orientation: "bottom right",
      
     });
+    
+    $('#accident_date').datepicker({
+      language: "es",
+      format: "yyyy-mm-dd",
+      weekStart:0,
+      todayHighlight: true,
+      todayBtn:true,
+      orientation: "bottom right",
+     
+    });
 });
 </script>
 @endsection
