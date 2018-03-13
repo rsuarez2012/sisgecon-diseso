@@ -74,6 +74,13 @@ class CreateOccupationalHistoriesTable extends Migration
             $table->string('no_ionizing_year')->nullable();
 
                 //quimicos
+            $table->enum('fumes', ['1', '0'])->default('0');//humos
+            $table->string('fumes_type')->nullable();
+            $table->enum('fumes_acute', ['1', '0'])->default('0');
+            $table->enum('fumes_chronicle', ['1', '0'])->default('0');
+            $table->string('fumes_moses')->nullable();
+            $table->string('fumes_year')->nullable();
+
             $table->enum('dust', ['1', '0'])->default('0');//polvos y fibras
             $table->string('dust_type')->nullable();
             $table->enum('dust_acute', ['1', '0'])->default('0');
