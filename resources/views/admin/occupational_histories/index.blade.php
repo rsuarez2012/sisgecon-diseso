@@ -27,7 +27,7 @@
 							</tr>
 						</thead>
 						<tbody>	
-							@foreach($occupationals as $occupational)
+							@foreach($occupatinals as $occupational)
 							<tr>
 								<td>{{ $occupational->id }}</td>
 								<td>{{ $occupational->people->history }}</td>
@@ -35,12 +35,12 @@
 								<td>{{ $occupational->people->dependencies->info }}</td>								
 								<td>
 									<a href="{{-- route('historia_ocupacional.show') --}}" class="btn btn-info btn-sm">Ver</a>
-									<a href="{{-- route('historia_ocupacional.edit') --}}" class="btn btn-success btn-sm">Editar</a>
+									<a href="{{route('historia_ocupacional.edit', $occupational->id) }}" class="btn btn-success btn-sm">Editar</a>
 									<a href="{{-- route('historia_ocupacional.destroy') --}}" class="btn btn-danger btn-sm">Editar</a>
 								</td>
 								
 							</tr>
-							{{--end foreach--}}					
+							@endforeach					
 						</tbody>
 						
 					</table>						

@@ -17,6 +17,10 @@ class People extends Model
     {
     	return $this->hasMany('App\History', 'people_id');
     }
+    public function occupationals()
+    {
+    	return $this->hasMany('App\OccupationalHistory', 'people_id');
+    }
     public function dependencies()
     {
         return $this->belongsTo('App\Dependency', 'dependency_id');
