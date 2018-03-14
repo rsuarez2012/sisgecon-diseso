@@ -109,8 +109,8 @@
                 </tr>
             </tbody>
         </table>   
-                <table class=" table table-bordered col-md-12">
-              <thead>
+        <table class=" table table-bordered col-md-12">
+            <thead>
                 <tr>
                   <th colspan="4" class="active">¿Ha Estado expuesto a los siguientes riesgos ocupacionales?</th>
                 </tr>
@@ -120,8 +120,8 @@
                   <th>Descripción de la exposición</th>
                   <th>Tiempo de Exposición</th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
                 <tr>
                   <th rowspan="6" class="active">Físicos</th>
                     <td>
@@ -208,225 +208,272 @@
                 <tr>
                   <th rowspan="5" class="active">Químicos</th>
                     <td>
-                      {{-- $occupational-> --}} 
+                      Humos: {{ $occupational->fumes }} 
                     </td>
                     <td>
-                      {{-- $occupational-> --}} 
-                    </td>
-                        <td>
-                            Meses: {{ $occupational->noise_moses }} <br>
-                            Años: {{ $occupational->noise_year }} 
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>
-                       {{-- $occupational-> --}}  
+                        Tipos: {{ $occupational->fumes_type }} <br>
+                        Exp. Aguda: {{ $occupational->fumes_acute }} <br>
+                        Exp. Crónica: {{ $occupational->fumes_chronicle }} 
                     </td>
                     <td>
-                      {{-- $occupational-> --}} 
-                    </td>
-                        <td>
-                            Meses: {{ $occupational->noise_moses }} <br>
-                            Años: {{ $occupational->noise_year }} 
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        {{-- $occupational-> --}} 
-                      </td>
-                    <td>
-                      {{-- $occupational-> --}} 
-                    </td>
-                        <td>
-                            Meses: {{ $occupational->noise_moses }} <br>
-                            Años: {{ $occupational->noise_year }} 
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>
-                       {{-- $occupational-> --}} 
-                      </td>
-                    <td>
-                      
-                    </td>
-                        <td>
-                            Meses: {{ $occupational->noise_moses }} <br>
-                            Años: {{ $occupational->noise_year }} 
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        {{-- $occupational-> --}} 
-                      </td>
-                    <td>
-                      {{-- $occupational-> --}} 
-                    </td>
-                    <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Meses: {{ $occupational->fumes_moses }} <br>
+                        Años: {{ $occupational->fumes_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <th rowspan="8" class="active">Disergonómico</th>
                     <td>
-                      {{-- $occupational-> --}} 
+                        Polvos y/o fibras Orgánicas o Inorganicas: {{ $occupational->dust }}
                     </td>
                     <td>
-                      {{-- $occupational-> --}} 
+                        Cuáles: {{ $occupational->dust_type }} <br>
+                        Exp. Aguda: {{ $occupational->dust_acute }} <br>
+                        Exp. Crónica: {{ $occupational->dust_chronicle }} 
                     </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
-                    </td>
-                </tr>
-                <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td></td>
-                    <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Meses: {{ $occupational->dust_moses }} <br>
+                        Años: {{ $occupational->dust_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td></td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Metales Pesados y Metaloides: {{ $occupational->metals }}
+                    </td>
+                    <td>
+                        Cuáles: {{ $occupational->metals_type }} <br>
+                        Exp. Aguda: {{ $occupational->metals_acute }} <br>
+                        Exp. Crónica: {{ $occupational->metals_chronicle }} 
+                    </td>
+                    <td>
+                        Meses: {{ $occupational->metals_moses }} <br>
+                        Años: {{ $occupational->metals_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td></td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Gases y Vapores: {{ $occupational->vapors }}
+                    </td>
+                    <td>
+                        Cuáles: {{ $occupational->vapors_type }} <br>
+                        Exp. Aguda: {{ $occupational->vapors_acute }} <br>
+                        Exp. Crónica: {{ $occupational->vapors_chronicle }} 
+                    </td>
+                    <td>
+                        Meses: {{ $occupational->vapors_moses }} <br>
+                        Años: {{ $occupational->vapors_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Solventes: {{ $occupational->solvents }} 
+                    </td>
+                    <td>
+                        Cuáles: {{ $occupational->solvents_type }} <br>
+                        Exp. Aguda: {{ $occupational->solvents_acute }} <br>
+                        Exp. Crónica: {{ $occupational->solvents_chronicle }} 
+                    </td>
+                    <td>
+                        Meses: {{ $occupational->solvents_moses }} <br>
+                        Años: {{ $occupational->solvents_year }} 
+                    </td>
+                </tr>                    
+                <tr>
+                    <th rowspan="8" class="active">Disergonómico</th>
+                    <td>
+                        Posiciones:<br>
+                        Sedestacion: {{ $occupational->sitting }}<br>
+                        Prolongada: {{ $occupational->prolonged }}
+                    </td>
+                    <td>
+                        Caracteristicas de la silla: {{ $occupational->characteristic_chair }}                      
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->positions_hours }} <br>
+                        Meses: {{ $occupational->positions_moses }} <br>
+                        Años: {{ $occupational->positions_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Bipedestación:<br>
+                        Prolongada: {{ $occupational->standing }}
+                    </td>
+                    <td>
+                                             
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->standing_hours }} <br>
+                        Meses: {{ $occupational->standing_moses }} <br>
+                        Años: {{ $occupational->standing_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        De Rodillas: {{ $occupational->knees }}
+                    </td>
+                    <td>
+                                             
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->knees_hours }} <br>
+                        Meses: {{ $occupational->knees_moses }} <br>
+                        Años: {{ $occupational->knees_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{-- $occupational-> --}} 
-                  </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        De Cunclillas: {{ $occupational->cunnels }}
+                    </td>
+                    <td>
+                                             
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->cunnels_hours }} <br>
+                        Meses: {{ $occupational->cunnels_moses }} <br>
+                        Años: {{ $occupational->cunnels_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <th class="active">Biológicos</th>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
                     <td>
-                        Meses: {{ $occupational->noise_moses }} <br>
-                        Años: {{ $occupational->noise_year }} 
+                        Manipulación manual de carga<br>
+                        Levantamiento de <br>
+                        Peso: {{ $occupational->load }} Kg
+                    </td>
+                    <td>
+                        Tipo de Objeto: {{ $occupational->load_type }} <br>
+                        Frecuencia de Levantamiento: {{ $occupational->load_frecuncy }}                  
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->load_hours }} <br>
+                        Meses: {{ $occupational->load_moses }} <br>
+                        Años: {{ $occupational->load_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <th class="active">Mecánicos</th>
-                <td>
-                 {{-- $occupational-> --}} 
-                </td>
-                <td></td>
                     <td>
-                       Exp. Aguda: {{ $occupational->noise_acute }} <br>
-                       Exp. Crónica: {{ $occupational->noise_chronicle }} 
-
+                        Traslado Manual: {{ $occupational->transfer }}
+                    </td>
+                    <td>
+                        Tipo de Objeto: {{ $occupational->transfer_type }} <br>
+                        Peso: {{ $occupational->transfer_weight }} Kg<br>
+                        Distancia aprox: {{ $occupational->transfer_distance }} mts <br>
+                        Frecuencia: {{ $occupational->transfer_frecuncy }}                  
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->transfer_hours }} <br>
+                        Meses: {{ $occupational->transfer_moses }} <br>
+                        Años: {{ $occupational->transfer_year }} 
                     </td>
                 </tr>
                 <tr>
-                  <th class="active">Otros</th>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
-                <td>
-                  {{-- $occupational-> --}} 
-                </td>
+                    <td>
+                        Halar o Empujar:<br>
+                        Peso:{{ $occupational->push }}  Kg
+                    </td>
+                    <td>
+                        Tipo de Objeto: {{ $occupational->push_type }} <br>
+                        Peso: {{ $occupational->push_weight }} Kg<br>
+                        Distancia aprox: {{ $occupational->push_distance }} mts <br>
+                        Frecuencia: {{ $occupational->push_frecuncy }}                  
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->push_hours }} <br>
+                        Meses: {{ $occupational->push_moses }} <br>
+                        Años: {{ $occupational->push_year }} 
+                    </td>
                 </tr>
                 <tr>
-                  <th colspan="4">Preguntas Adicionales</th>
+                    <td>
+                        Movimientos Repetitivos:{{ $occupational->moves }}  Kg
+                    </td>
+                    <td>
+                        Parte del Cuerpo: {{ $occupational->moves_body }} <br>
+                        Frecuencia: {{ $occupational->moves_frecuncy }}                  
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->moves_hours }} <br>
+                        Meses: {{ $occupational->moves_moses }} <br>
+                        Años: {{ $occupational->moves_year }} 
+                    </td>
                 </tr>
                 <tr>
-                  <td colspan="2">
-                {{-- $occupational-> --}} 
-                  </td>
-                  <td colspan="2">
-                    {{-- $occupational-> --}} 
-                  </td>
+                    <th class="active">Biológicos</th>
+                    <td>
+                        Orgánicos: {{ $occupational->organic }}<br>
+                        Inorgánicos:{{ $occupational->inorganic }}
+                    </td>
+                    <td>
+                        Exp. a Animales/insectos: {{ $occupational->animals }} <br>
+                        
+                        Contactos con Desechos: {{ $occupational->waste }}                  
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->biologic_hours }} <br>
+                        Meses: {{ $occupational->biologic_moses }} <br>
+                        Años: {{ $occupational->biologic_year }} 
+                    </td>
                 </tr>
                 <tr>
-                  <td colspan="2">
-                  {{-- $occupational-> --}} 
-                  </td>
-                  <td colspan="2">
-                    {{-- $occupational-> --}} 
-                  </td>
+                    <th class="active">Mecánicos</th>
+                    <td>
+                        Trabajo en altura: {{ $occupational->work }}<br>
+                        Equipos sin guarda: {{ $occupational->guard }}<br>
+                        Otros:{{ $occupational->others }}
+                    </td>
+                    <td>                 
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->work_biologic_hours }} <br>
+                        Meses: {{ $occupational->work_biologic_moses }} <br>
+                        Años: {{ $occupational->work_biologic_year }} 
+                    </td>
                 </tr>
                 <tr>
-                  <td colspan="2">
-                {{-- $occupational-> --}} 
-                  </td>
-                  <td colspan="2">
-                {{-- $occupational-> --}} 
-                  </td>
+                    <th class="active">Otros</th>
+                    <td>
+                        {{ $occupational->other_type }}
+                    </td>
+                    <td> 
+                        {{ $occupational->other_description }}                
+                    </td>
+                    <td>
+                        Horas/Día: {{ $occupational->other_time }} 
+                    </td>
                 </tr>
                 <tr>
-                  <td colspan="4">
-                {{-- $occupational-> --}}
-                  </td>
+                    <th colspan="4" class="active">
+                        Preguntas Adicionales
+                     </th>
                 </tr>
-              </tbody>              
+                <tr>
+                    <td colspan="2">
+                        ¿Ha sufrido accidentes de trabajo ? {{ $occupational->accident }} 
+                    </td>
+                    <td colspan="2">
+                        ¿Qué parte del cuerpo se lesionó? {{ $occupational->body_part }} 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Fecha del accidente: {{ $occupational->accident_date }} 
+                    </td>
+                    <td colspan="2">
+                        Dejó alguna secuelas el accidente? {{ $occupational->aftermath }} 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Ha padecido o padece de enfermedad ocupacional? {{ $occupational->occupational_disease }} 
+                    </td>
+                    <td colspan="2">
+                        Fue certificada por el INPSASEL ? {{ $occupational->inpsasel }} 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        Cambia de trabajo con frecuencia ? {{ $occupational->change_work }}
+                    </td>
+                </tr>
+            </tbody>              
         </table> 
     </div>
 </div>
