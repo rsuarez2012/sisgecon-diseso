@@ -14,7 +14,7 @@
                 </div>
                 <div class="panel-body">
                 	
-            		<table class="table">
+            		<table id="example" class="display">
 						<thead>
 							<tr>
 								<th>Id</th>
