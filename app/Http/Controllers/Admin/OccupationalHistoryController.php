@@ -52,7 +52,11 @@ class OccupationalHistoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $occupational = occupationalHistory::findOrFail($id);
+        
+        
+        return view('admin.occupational_histories.show', compact('occupational', 'peoples'));    
     }
 
     /**
@@ -67,7 +71,8 @@ class OccupationalHistoryController extends Controller
         $occupational = occupationalHistory::findOrFail($id);
         
         
-        return view('admin.occupational_histories.edit', compact('occupational', 'peoples'));    }
+        return view('admin.occupational_histories.edit', compact('occupational', 'peoples'));    
+    }
 
     /**
      * Update the specified resource in storage.
@@ -78,8 +83,10 @@ class OccupationalHistoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $occupational = occupationalHistory::findOrFail($id);
+        
+        $occupational->fill($request->all())->save();
+        return redirect()->route('historia_ocupacional.show', $occupational->id)->with('info', 'Historia Ocupacional Editada con Exito.!');    }
 
     /**
      * Remove the specified resource from storage.

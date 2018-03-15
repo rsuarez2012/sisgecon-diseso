@@ -1,4 +1,3 @@
-
   <div class="panel-group" id="accordion">
     <div class="panel panel-info">
         <div class="panel-heading">
