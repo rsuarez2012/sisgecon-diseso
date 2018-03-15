@@ -16,7 +16,7 @@ class BeneficiaryController extends Controller
      */
     public function index()
     {
-        $beneficiaries = Beneficiary::orderBy('people_id')->paginate(10);
+        $beneficiaries = Beneficiary::orderBy('people_id')->get();
         //dd($beneficiaries);
         return view('admin.beneficiaries.index', compact('beneficiaries'));
     }

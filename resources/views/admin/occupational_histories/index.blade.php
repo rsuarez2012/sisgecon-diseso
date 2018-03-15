@@ -11,8 +11,6 @@
                 	<a class="btn btn-primary btn-sm pull-right" href="{{ route('historia_ocupacional.create') }}">
                         Nueva
                     </a>
-                	<!--<button  class="btn btn-primary btn-sm pull-right">Nuevo</button>-->
-
                 </div>
                 <div class="panel-body">
                 	
@@ -55,11 +53,4 @@
 				
 
 </div>
-@endsection
-@section('scripts')
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.table').DataTable();
-});
-</script>
 @endsection

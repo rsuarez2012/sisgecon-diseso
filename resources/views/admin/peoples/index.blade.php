@@ -14,8 +14,8 @@
                 	<!--<button  class="btn btn-primary btn-sm pull-right">Nuevo</button>-->
 
                 </div>
-                <div class="body">
-                	<p>Hay un total de: <b>{{ $count }}</b> Registros</p>
+                <div class="panel-body">
+                	
 					<table class="table table-responsive">
 						<thead>
 							<tr>
@@ -25,7 +25,7 @@
 								<th>Tipo de Empleado</th>
 								<th>Fecha de Ingreso</th>
 								<th>Estatus</th>
-								<th colspan="3">Acciones</th>
+								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -39,18 +39,12 @@
 								 <td>@if($peopl->status == 1) Activo @elseif ($peopl->status == 2)	Jubilado @elseif($peopl->status == 3)	Pensionado @else($peopl->status == 4) Incapacitado @endif</td>
 								 <td>
 								 	<a href="{{ route('titulares.show', $peopl->id) }}" class="btn btn-info btn-sm">Ver</a>
-								 </td>
-								 <td>
+								 
 								 	<a href="{{ route('titulares.edit', $peopl->id) }}" class="btn btn-success btn-sm">Editar</a>
-								 </td>
-								 <td>
-								 	
-								 			{!! Form::open(['route'=>['titulares.destroy', $peopl->id], 'method'=> 'DELETE']) !!}
 
-								 			<button class="btn btn-danger btn-sm">Eliminar</button>
-
-								 		{!! Form::close() !!}
-								 	</td> 				    
+								 	<a href="{{ route('titulares.destroy', $peopl->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+								 							 		
+								 </td> 				    
 								
 							</tr>
 
@@ -58,7 +52,7 @@
 						</tbody>
 						
 					</table>
-					<div class="pull-right"> {{ $people->render() }}</div>
+					
                 </div>
 				
 			</div>
@@ -70,10 +64,4 @@
 				
 
 </div>
-
-	
-
-	
-
-	
 @endsection

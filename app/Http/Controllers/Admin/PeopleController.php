@@ -27,10 +27,10 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $people = People::orderBy('employee_type')->paginate(10);
-        $count = People::count();
+        $people = People::orderBy('status', 'ASC')->get();
+        
         //dd($people);
-        return view('admin.peoples.index', compact('people', 'count'));
+        return view('admin.peoples.index', compact('people'));
     }
 
     /**
