@@ -4,7 +4,7 @@ $(document).ready(function(){
   		lengthMenu: "Mostrar _MENU_ registros por pagina",
   		search:         "Buscar",
   		emptyTable:     "No hay datos registrados",
-  		info: "Mostrando _START_ a _END_ registros de _TOTAL_ registrados por paginas.",
+  		info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros.",
         paginate: {
             first:      "Primero",
             previous:   "Anterior",

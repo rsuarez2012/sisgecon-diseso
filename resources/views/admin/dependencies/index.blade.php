@@ -17,17 +17,17 @@
             		<table class="table">
 						<thead>
 							<tr>
-								<th>Id</th>
-								<th>Dependencia</th>
-								<th>Acciones</th>
+								<th style="text-align: center;">Id</th>
+								<th style="text-align: center;">Dependencia</th>
+								<th style="text-align: center;">Acciones</th>
 							</tr>
 						</thead>
 						<tbody>	
 						@foreach($dependencies as $dependency)					
 							<tr>
-								<td>{{ $dependency->id }}</td>
-								<td>{{ $dependency->dependency }}</td> 
-								<td>
+								<td align="center">{{ $dependency->id }}</td>
+								<td align="center">{{ $dependency->dependency }}</td> 
+								<td align="center">
 									<a href="{{ route('dependencias.show', $dependency->id) }}" class="btn btn-info btn-sm">Ver</a>
 									<a href="{{ route('dependencias.edit', $dependency->id) }}" class="btn btn-success btn-sm">Editar</a>
 									<a href="{{ route('dependencias.destroy', $dependency->id) }}" class="btn btn-danger btn-sm">Editar</a>
