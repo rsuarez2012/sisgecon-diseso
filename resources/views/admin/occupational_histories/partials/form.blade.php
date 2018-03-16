@@ -13,7 +13,7 @@
 				    <small id="nameHelp" class="form-text text-muted">Titular</small>
 				</div>-->
 				<div class="form-group table-responsive">
-				    <table class="table table-bordered col-md-12">
+				    <table class="table-bordered col-md-12">
 				    	<thead>
 					    	<tr>
 					    		<th>
@@ -23,12 +23,12 @@
 					    			{{ Form::select('people_id', $peoples, null, ['class' => 'form-control', 'id' => 'people']) }}
 					    		</th>
 					    	</tr>
-					    	<tr>
-					    		<th colspan="5" class="active" style="text-align: center;">
+					    	<tr class="active" style="background-color: #f5f5f5;">
+					    		<th colspan="5" style="text-align: center;">
 					    			Trabajos Anteriores
 					    		</th>
 					    	</tr>
-			        		<tr class="active">
+			        		<tr class="active" style="background-color: #f5f5f5;">
 			        			<th width="18%">EMPRESA</th>
 			        			<th width="22%">ACTIVIDAD LABORAL</th>
 			        			<th width="15%">DESDE</th>
