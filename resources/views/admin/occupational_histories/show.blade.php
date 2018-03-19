@@ -125,7 +125,7 @@
                 <tr>
                   <th rowspan="6" class="active">Físicos</th>
                     <td>
-                       Ruido: {{ $occupational->noise }} 
+                       Ruido: @if($occupational->noise == 1) SI @else NO @endif
                     </td>
                     <td>
                        Exp. Aguda: {{ $occupational->noise_acute }} <br>

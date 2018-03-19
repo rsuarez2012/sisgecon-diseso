@@ -104,13 +104,13 @@
       </div>
       <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
-        	<div class="table-responsive form-group">
-        		<table class=" table table-bordered col-md-12">
+        	<div class=" form-group table-responsive">
+        		<table class="table-bordered col-md-12">
         			<thead>
-        				<tr>
+        				<tr style="background-color: #f5f5f5;">
 	        				<th colspan="4" class="active">¿Ha Estado expuesto a los siguientes riesgos ocupacionales?</th>
 	        			</tr>
-	        			<tr class="active">
+	        			<tr class="active" style="background-color: #f5f5f5;">
 	        				<th rowspan="0">Agentes</th>
 	        				<th>Tipo</th>
 	        				<th>Descripción de la exposición</th>
@@ -119,7 +119,7 @@
         			</thead>
         			<tbody>
         				<tr>
-	        				<th rowspan="6" class="active">Físicos</th>
+	        				<th rowspan="6" style="background-color: #f5f5f5;">Físicos</th>
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Ruido</small>
 			    				{{ Form::checkbox('noise', 1 ) }}
@@ -219,7 +219,7 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th rowspan="5" class="active">Químicos</th>
+	        				<th rowspan="5" style="background-color: #f5f5f5;">Químicos</th>
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Humos</small>
 			    				{{ Form::checkbox('fumes', 1 ) }}<br>
@@ -306,7 +306,7 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th rowspan="8" class="active">Disergonómico</th>
+	        				<th rowspan="8" style="background-color: #f5f5f5;">Disergonómico</th>
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Posiciones:</small><br>
 	    						<small id="nameHelp" class="form-text text-muted">Sedestación</small>
@@ -425,7 +425,7 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th class="active">Biológicos</th>
+	        				<th style="background-color: #f5f5f5;">Biológicos</th>
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Orgánicos</small>
 			    				{{ Form::checkbox('organic', 1 ) }}<br>
@@ -445,7 +445,7 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th class="active">Mecánicos</th>
+	        				<th style="background-color: #f5f5f5;">Mecánicos</th>
 	    					<td>
 	    						<small id="nameHelp" class="form-text text-muted">Trbajo en Altura</small>
 			    				{{ Form::checkbox('work', 1 ) }}<br>
@@ -462,7 +462,7 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th class="active">Otros</th>
+	        				<th style="background-color: #f5f5f5;">Otros</th>
 	    					<td>
 	    						{{ Form::text('other_type', null, ['class'=>'col-md-12', 'placeholder'=>'Otro Agente']) }}
 	    					</td>
@@ -474,7 +474,9 @@
 	    					</td>
 	        			</tr>
 	        			<tr>
-	        				<th colspan="4">Preguntas Adicionales</th>
+	        				<th colspan="4" style="background-color: #f5f5f5;">
+	        					Preguntas Adicionales
+	        				</th>
 	        			</tr>
 	        			<tr>
 	        				<td colspan="2">
