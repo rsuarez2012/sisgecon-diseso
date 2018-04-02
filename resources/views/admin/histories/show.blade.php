@@ -5,7 +5,7 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-            <h4>Numero de Historia Medica: {{ $history->people->history }}</h4>
+            <h3>Numero de Historia Medica: <span class="label label-success"> {{ $history->people->history }}</span></h3>
       </div>
 
       <div class="panel-body">
@@ -21,7 +21,7 @@
           </tr>
           <tr>
             <td>{{ $history->people->full_name }}</td>
-            <td>{{ $history->people->birthdate }}</td>
+            <td>{{ Carbon\Carbon::parse($history->people->birthdate)->age }} Años</td>
             <td>{{ $history->people->address }}</td>
             
           </tr>  

@@ -30,7 +30,7 @@
 								<td align="center">
 									<a href="{{ route('dependencias.show', $dependency->id) }}" class="btn btn-info btn-sm">Ver</a>
 									<a href="{{ route('dependencias.edit', $dependency->id) }}" class="btn btn-success btn-sm">Editar</a>
-									<a href="{{ route('dependencias.destroy', $dependency->id) }}" class="btn btn-danger btn-sm">Editar</a>
+									<a href="{{ route('dependencias.destroy', $dependency->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
 								</td>
 							</tr>
 						@endforeach							

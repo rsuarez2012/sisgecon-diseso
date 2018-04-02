@@ -46,7 +46,7 @@ class BeneficiaryController extends Controller
         //$da = $request->all();
         //dd($da);
         $beneficiaries = Beneficiary::create($request->all());
-        return redirect()->route('beneficiarios.edit', $beneficiaries->id)->with('info', 'Beneficiario Almacenado con Exito.!');
+        return redirect()->route('beneficiarios.index', $beneficiaries->id)->with('info', 'Beneficiario Almacenado con Exito.!');
     }
 
     /**
@@ -101,7 +101,8 @@ class BeneficiaryController extends Controller
      */
     public function destroy($id)
     {
-        $beneficiary = Beneficiary::find($id)->delete();
-        return back()->with('info', 'Beneficiario Eliminado correctamente.!');
+        $beneficiary = Beneficiary::findOrFail($id);
+        $beneficiary->delete();
+        return back()->with('info', 'Beneficiario '.$beneficiary->first_name.' '.$beneficiary->last_name.' Eliminado correctamente.!');
     }
 }

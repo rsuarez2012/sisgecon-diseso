@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -21,7 +22,7 @@
           </tr>
           <tr>
             <td>{{ $occupational->people->full_name }}</td>
-            <td>{{ $occupational->people->birthdate }}</td>
+            <td>{{ Carbon\Carbon::parse($occupational->people->birthdate)->age }} Años</td>
             <td>{{ $occupational->people->address }}</td>
             
           </tr>  

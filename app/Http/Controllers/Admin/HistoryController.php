@@ -46,7 +46,7 @@ class HistoryController extends Controller
         //$da = $request->all();
         //dd($da);
         $history = History::create($request->all());
-        return redirect()->route('historias.edit', $history->id)->with('info', 'Historia Almacenado con Exito.!');
+        return redirect()->route('historias.index', $history->id)->with('info', 'Historia Almacenado con Exito.!');
     }
 
     /**

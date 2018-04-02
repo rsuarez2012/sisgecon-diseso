@@ -19,7 +19,7 @@
 								<th>Beneficiario</th>
 								<th>Cedula</th>
 								<th>Fecha de Nacimiento</th>
-								<th>Acciones</th>
+								<th colspan="2">Acciones</th>
 							</tr>
 						</thead>
 						<tbody>	
@@ -33,7 +33,10 @@
 								 <td>
 								 	<a href="{{ route('beneficiarios.show', $beneficiary->id) }}" class="btn btn-info btn-sm">Ver</a>		 
 								 	<a href="{{ route('beneficiarios.edit', $beneficiary->id) }}" class="btn btn-success btn-sm">Editar</a>
-								 	<a href="{{ route('beneficiarios.destroy', $beneficiary->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+								 	
+								 </td>
+								 <td>
+								 	@include('admin.beneficiaries.partials.delete');
 								 </td> 				    
 								
 							</tr>

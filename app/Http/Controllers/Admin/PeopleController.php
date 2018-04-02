@@ -55,7 +55,7 @@ class PeopleController extends Controller
         //$da = $request->all();
         //dd($da);
         $people = People::create($request->all());
-        return redirect()->route('titulares.edit', $people->id)->with('info', 'Titular Almacenado con Exito.!');
+        return redirect()->route('titulares.index', $people->id)->with('info', 'Titular Almacenado con Exito.!');
         //return redirect()->action('PeopleController@index')->with('info', 'Titular Almacenado con Exito.!');
         //return redirect()->route('titular.editar', $people->id)->with('info', 'Titular Almacenado con Exito.!');
         //return back()->with('info', 'Titular Almacenado con Exito.!');
@@ -121,8 +121,10 @@ class PeopleController extends Controller
      */
     public function destroy($id)
     {
-        $peopl = People::find($id)->delete();
-        return back()->with('info', 'Eliminado correctamente');
+        //$peopl = People::find($id);
+        $peopl = People::findOrFail($id);
+        $peopl->delete();
+        return redirect()->route('titulares.index')->with('info', $peopl->first_name.' '.$peopl->last_name . ' Fue Eliminado correctamente');
     }
 
 

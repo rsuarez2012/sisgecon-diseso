@@ -40,7 +40,7 @@ class DependencyController extends Controller
     public function store(Request $request)
     {
         $dependency = Dependency::create($request->all());
-        return redirect()->route('dependencias.edit', $dependency->id)->with('info', 'Dependencia Almacenado con Exito.!');
+        return redirect()->route('dependencias.index', $dependency->id)->with('info', 'Dependencia Almacenado con Exito.!');
     }
 
     /**

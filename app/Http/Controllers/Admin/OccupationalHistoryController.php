@@ -40,7 +40,7 @@ class OccupationalHistoryController extends Controller
     {
         $occupational = occupationalHistory::create($request->all());
         //dd($occupational);
-        return redirect()->route('historia_ocupacional.edit', $occupational->id)->with('info', 'Historia Ocupacional Almacenado con Exito.!');
+        return redirect()->route('historia_ocupacional.index', $occupational->id)->with('info', 'Historia Ocupacional Almacenado con Exito.!');
     }
  
 
