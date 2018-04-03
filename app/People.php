@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class People extends Model
 {
+	use SoftDeletes;
+	
 	protected $table = 'people';
     protected $fillable = ['dni', 'first_name', 'last_name', 'place_of_birth', 'marital_status', 'address', 'telephone', 'cellphone', 'email', 'employee_type', 'position', 'status', 'gender', 'birthdate', 'date_of_admission', 'dependency_id' ];
 

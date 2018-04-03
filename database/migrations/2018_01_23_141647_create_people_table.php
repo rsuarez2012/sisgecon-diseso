@@ -33,6 +33,7 @@ class CreatePeopleTable extends Migration
             $table->date('date_of_admission');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
