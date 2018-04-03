@@ -24,7 +24,7 @@ class HistoryStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'people_id'         => 'required',
+            'people_id'         => 'required|unique:histories',
             'motive'            => 'required',
             'current_illness'   => 'required',
             'personal_history'  => 'required',
@@ -42,6 +42,7 @@ class HistoryStoreRequest extends FormRequest
     {
         return [
             'people_id.required'        => 'Seleccionar un tirular.',
+            'people_id.unique'          => 'El titular ya cuenta con una Historia Medica',
             'motive.required'           => 'Motivo de la consulta es requerido.',
             'current_illness.required'  => 'La Enfermedad actual es requerida.',
             'personal_history.required' => 'Los Precedentes Personales es requerido.',

@@ -83,7 +83,7 @@
 			    <small id="nameHelp" class="form-text text-muted">Tabaco</small>
 			</div>
 
-			<p>Examen Funcional</p>
+			<p><b>Examen Funcional</b></p>
 			<div class="form-group col-md-3">
 				{{ Form::label('fever', 'General:') }}
 				<small id="nameHelp" class="form-text text-muted">Fiebre</small>

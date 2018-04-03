@@ -31,11 +31,18 @@
 							@foreach ($people as $peopl)
 							<tr>
 								<td>
-									<a href="{{ route('titulares.show', $peopl->id) }}" title="Ver"><label class="label label-info">{{ $peopl->id }}</label></a></td>
+									<label class="label label-info">
+										<a href="{{ route('titulares.show', $peopl->id) }}" title="Ver">
+											{{ $peopl->id }}
+										</a>
+									</label>
+								</td>
 								 <td>
-								 	<a href="{{ route('titulares.edit', $peopl->id) }}" title="Editar">
-								 		<label class="label label-warning">{{	$peopl->dni	}}</label>
-								 	</a>
+								 	<label class="label label-warning">
+								 		<a href="{{ route('titulares.edit', $peopl->id) }}" title="Editar">
+								 			{{	$peopl->dni	}}
+								 		</a>
+								 	</label>								 	
 								 </td>
 								 <td>{{	$peopl->first_name.' '.$peopl->last_name	}}</td>
 								 <td>{{	$peopl->type_employee	}}</td>
