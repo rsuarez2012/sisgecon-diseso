@@ -15,6 +15,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
@@ -39,7 +40,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>{{-- Auth::user()->name --}}</h2>
+                <h2>{{ Auth::user()->name }}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -52,18 +53,28 @@
 
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                
                     <li>
-                        <a href="{{ route('titulares.index') }}">Titulares</a>
+                        <a>
+                            <i class="fa fa-home"></i> 
+                            Dashboard                             
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('beneficiarios.index') }}">Beneficiarios</a>
+                        <a href="{{ route('titulares.index') }}">
+                            <i class="fa fa-users"></i>Titulares
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('dependencias.index') }}">Dependencias</a>
+                        <a href="{{ route('beneficiarios.index') }}">
+                            <i class="fa fa-users"></i>Beneficiarios</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Historias <span class="fa fa-chevron-down"></span>
+                    <li>
+                        <a href="{{ route('dependencias.index') }}">
+                            <i class="fa fa-institution"></i>Dependencias</a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-h-square"></i> Historias <span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
@@ -73,8 +84,21 @@
                                 <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
                             </li>
                         </ul>
-                    </li>
-                                
+                    </li> 
+                    <li>
+                        <a>
+                            <i class="fa fa-user"></i>Usuario
+                            <span class="fa fa-chevron-down"></span>
+
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a href="{{ route('register') }}">
+                                    Nuevo Usuario
+                                </a>
+                            </li>
+                        </ul>
+                    </li>           
                 </ul>
               </div>
               <!--<div class="menu_section">
@@ -124,7 +148,7 @@
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
+            <!--<div class="sidebar-footer hidden-small">
               <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
@@ -137,7 +161,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
-            </div>
+            </div>-->
             <!-- /menu footer buttons -->
           </div>
         </div>
@@ -161,13 +185,13 @@
                         <span class=" fa fa-angle-down"></span>
                       </a>
                       <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Profile</a></li> 
+                        <!--<li><a href="javascript:;"> Profile</a></li>--> 
                         <li>
-                            <i class="fa fa-sign-out pull-right"></i>
+                            
                                 <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                Logout
+                                <i class="fa fa-sign-out pull-right"></i>Logout
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -320,7 +344,7 @@
             </div>
         </div>
         <!--yield('content')-->
-    </div>-->
+    </div>
 
     <!-- Scripts -->
     <!--<script src="http://code.jquery.com/jquery-3.3.1.js"
