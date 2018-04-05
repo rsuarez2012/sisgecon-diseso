@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\People;
-use App\Dependency;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
@@ -11,7 +9,8 @@ use App\Http\Requests\PeopleStoreRequest;
 use App\Http\Requests\PeopleUpdateRequest;
 use Carbon\Carbon;
 
-
+use App\People;
+use App\Dependency;
 use App\Beneficiary;
 class PeopleController extends Controller
 {

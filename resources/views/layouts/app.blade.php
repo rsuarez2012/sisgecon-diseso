@@ -19,7 +19,7 @@
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
-     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">-->
+    
 </head>
 <!--<body>-->
 <body class="nav-md">
@@ -28,7 +28,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Sisgecon Diseso!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>{{ config('app.name', 'Laravel') }}!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -87,82 +87,24 @@
                     </li> 
                     <li>
                         <a>
-                            <i class="fa fa-user"></i>Usuario
+                            <i class="fa fa-user"></i>Usuarios
                             <span class="fa fa-chevron-down"></span>
 
                         </a>
                         <ul class="nav child_menu">
-                            <li>
-                                <a href="{{ route('register') }}">
-                                    Nuevo Usuario
-                                </a>
-                            </li>
+                          <li>
+                            <a href="{{ route('usuarios.index') }}">Usuarios</a>
+                          </li>
+                          <li>
+                              <a href="{{ route('register') }}">
+                                  Nuevo Usuario
+                              </a>
+                          </li>
                         </ul>
                     </li>           
                 </ul>
               </div>
-              <!--<div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="page_403.html">403 Error</a></li>
-                      <li><a href="page_404.html">404 Error</a></li>
-                      <li><a href="page_500.html">500 Error</a></li>
-                      <li><a href="plain_page.html">Plain Page</a></li>
-                      <li><a href="login.html">Login Page</a></li>
-                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                          <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Level Two</a>
-                            </li>
-                            <li><a href="#level2_1">Level Two</a>
-                            </li>
-                            <li><a href="#level2_2">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#level1_2">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
-                </ul>
-              </div>-->
-
             </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <!--<div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>-->
-            <!-- /menu footer buttons -->
           </div>
         </div>
 
@@ -213,7 +155,9 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>MODULOS <small>Modulos y descripcion</small></h3>
+                @php $path = explode('/',Request::path()) @endphp 
+                               
+                <h3>{{ title_case($path[0]) }}</h3>
               </div>
 
               <div class="title_right">
@@ -227,6 +171,30 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-md-12 col-md-offset-0">
+                              @if(session('info'))
+                                  <div class="alert alert-success">
+                                    <i class="fa fa-check"></i>
+                                      {{ session('info') }}
+                                  </div>
+                              @endif                    
+                          </div>
+                          @if(count($errors))            
+                              <div class="col-md-10 col-md-offset-1">
+                                  <div class="alert alert-danger">
+                                     <i class="fa fa-exclamation-circle"></i>
+                                      <ul>
+                                          @foreach($errors->all() as $error)
+                                          <li>{{ $error }}</li>
+                                          @endforeach
+                                      </ul>
+                                  </div>
+                              </div>          
+                          @endif
+                      </div>
+                    </div>
                     @yield('content')
                     
                   </div>
@@ -240,7 +208,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Sistema Desarrollado por Ing Raul Suarez UNERG
           </div>
           <div class="clearfix"></div>
         </footer>

@@ -25,7 +25,7 @@ Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares
 //titulares
 Route::resource('titulares', 'Admin\PeopleController');
 Route::get('ver_carga/{id}/', 'Admin\PeopleController@beneficiaries')->name('titulares.beneficiarios');
-Route::get('/personas/autocomplete', 'HomeController@autocomplete');
+
 
 
 //beneficiarios
@@ -42,6 +42,12 @@ Route::resource('historias', 'Admin\HistoryController');
 
 //historia Ocupacional
 Route::resource('historia_ocupacional', 'Admin\OccupationalHistoryController');
+
+//Usuarios
+Route::resource('usuarios', 'Admin\UserController');
+
+
+
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
 /*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/
