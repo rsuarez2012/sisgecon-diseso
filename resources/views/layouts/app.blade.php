@@ -157,7 +157,7 @@
               <div class="title_left">
                 @php $path = explode('/',Request::path()) @endphp 
                                
-                <h3>{{ title_case($path[0]) }}</h3>
+                <h3>{{ strtoupper(title_case($path[0])) }}</h3>
               </div>
 
               <div class="title_right">
