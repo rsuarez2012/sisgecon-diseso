@@ -18,19 +18,19 @@ class CreateOccupationalHistoriesTable extends Migration
             //titular
             $table->integer('people_id')->unsigned();
             //trabajos anteriores
-            $table->string('company');//empresa
+            $table->string('company')->nullable();//empresa
             $table->string('company1')->nullable();
             $table->string('company2')->nullable();
-            $table->string('activity');//actividad
+            $table->string('activity')->nullable();//actividad
             $table->string('activity1')->nullable();
             $table->string('activity2')->nullable();
-            $table->string('since');//desde
+            $table->string('since')->nullable();//desde
             $table->string('since1')->nullable();
             $table->string('since2')->nullable();
-            $table->string('until');//hasta
+            $table->string('until')->nullable();//hasta
             $table->string('until1')->nullable();
             $table->string('until2')->nullable();
-            $table->string('risks');//riesgos
+            $table->string('risks')->nullable();//riesgos
             $table->string('risks1')->nullable();
             $table->string('risks2')->nullable();
             //antecedentes ocupacionales
