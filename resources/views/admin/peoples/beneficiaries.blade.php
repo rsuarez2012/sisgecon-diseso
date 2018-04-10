@@ -5,7 +5,7 @@
     <div class="panel panel-info">
   <!-- Default panel contents -->
       <div class="panel-heading">
-            <h4>Titular: {{ $people->full_name }}</h4>
+            <h4>Carga Familiar del titular: {{ $people->full_name }}</h4>
         
         
       </div>
