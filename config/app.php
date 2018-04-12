@@ -166,6 +166,7 @@ return [
 
         //laravel Collective para formularios
         Collective\Html\HtmlServiceProvider::class,
+        Caffeinated\Shinobi\ShinobiServiceProvider::class,
 
         /*
          * Package Service Providers...
