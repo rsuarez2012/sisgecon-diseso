@@ -21,7 +21,11 @@
             <tr>
                 <td>{{ $carga->id }}</td>
                 <td>{{ $carga->first_name }} {{ $carga->last_name }}</td>
-                <td>{{ Carbon\Carbon::parse($carga->birthdate)->format('d-m-Y') }}</td>
+                <td>{{ Carbon\Carbon::parse($carga->birthdate)->format('d-m-Y') }}
+                    @if( Carbon\Carbon::parse($carga->birthdate)->age  > 18 && $carga->relationship == 3)
+                        <label class="label label-danger"> - Pasa los 18 años</label>
+                    @endif
+                </td>
                 <td>{{ $carga->type_relationship }}</td>
                 
             </tr>
