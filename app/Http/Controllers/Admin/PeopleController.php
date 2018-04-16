@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PeopleStoreRequest;
 use App\Http\Requests\PeopleUpdateRequest;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Input;//para buscar relacion titular->beneficiario
 
 use App\People;
 use App\Dependency;
@@ -136,5 +137,18 @@ class PeopleController extends Controller
         return view('admin.peoples.beneficiaries', compact('people', 'cargas'));
     }
     
+    public function bene()
+    {
+        $peoples = People::all();
+        return view('admin.peoples.bene', compact('peoples'));
+    }
+    public function nebe()
+    {
+        $people_id = Input::get('people_id');
+        $beneficiaries = Beneficiary::where('people_id', '=', $people_id)->get();
+        //$peoples = People::all();
+        //return view('admin.peoples.bene', compact('peoples'));
+        return response()->json($beneficiaries);
+    }
 
 }
