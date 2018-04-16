@@ -25,7 +25,8 @@ Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares
 //titulares
 Route::resource('titulares', 'Admin\PeopleController');
 Route::get('ver_carga/{id}/', 'Admin\PeopleController@beneficiaries')->name('titulares.beneficiarios');
-
+Route::get('bene', 'Admin\PeopleController@bene')->name('titulares.bene');
+Route::get('/json-beneficiaries', 'Admin\PeopleController@nebe');
 
 
 //beneficiarios
