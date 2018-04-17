@@ -24,7 +24,8 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
-
+$(document).ready(function(){
+	$('#peoples').select2();
 	$('#peoples').on('change', function(e) {
 		/* Act on the event */
 		console.log(e);
@@ -37,10 +38,10 @@
 
 			$.each(data, function(index, beneficiariesObj){
 				//alert(beneficiariesObj.first_name);
-				$('#beneficiaries').append('<option value="'+ beneficiariesObj.id +'">'+ beneficiariesObj.first_name +'</option>');
-				
-				})
+				$('#beneficiaries').append('<option value="'+ beneficiariesObj.id +'">'+ beneficiariesObj.first_name +'</option>');				
+			})
 		});
 	});
+});
 </script>
 @endsection
