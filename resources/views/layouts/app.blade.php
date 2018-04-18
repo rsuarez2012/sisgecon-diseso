@@ -74,7 +74,7 @@
                     </li>
                     <li>
                         <a>
-                            <i class="fa fa-h-square"></i> Historias <span class="fa fa-chevron-down"></span>
+                            <i class="fa fa-h-square"></i> Historias Y Reposos <span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
@@ -82,6 +82,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('reposos.index') }}">Reposos</a>
                             </li>
                         </ul>
                     </li> 
