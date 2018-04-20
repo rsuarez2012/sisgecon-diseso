@@ -36,7 +36,7 @@
 								<td align="center">
 									<a href="{{ route('reposos.show', $repose->id) }}" class="btn btn-info btn-sm">Ver</a>
 									<a href="{{ route('reposos.edit', $repose->id) }}" class="btn btn-success btn-sm">Editar</a>
-									<a href="{{ route('reposos.destroy', $repose->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+									<a href="{{ route('reposos.destroy', $repose->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar?')">Eliminar</a>
 								</td>
 							</tr>
 						@endforeach							

@@ -18,7 +18,7 @@ class ReposeController extends Controller
     public function index()
     {
         $reposes = Repose::all();
-        return view('admin/reposes/index', compact('reposes'));
+        return view('admin.reposes.index', compact('reposes'));
     }
 
     /**
@@ -29,7 +29,7 @@ class ReposeController extends Controller
     public function create()
     {
         $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
-        return view('admin/reposes/create', compact('peoples'));
+        return view('admin.reposes.create', compact('peoples'));
     }
 
     /**
@@ -87,8 +87,10 @@ class ReposeController extends Controller
      * @param  \App\Repose  $repose
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Repose $repose)
+    public function destroy($id)
     {
-        //
+        $repose = Repose::findOrFail($id);
+        $repose->delete();
+        return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente');
     }
 }
