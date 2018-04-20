@@ -28,15 +28,15 @@
 						<tbody>	
 						@foreach($reposes as $repose)					
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td align="center">{{ $repose->id }}</td>
-								<td align="center">{{ $repose->repose }}</td> 
+								<td>{{ $repose->id }}</td>
+								<td>{{ $repose->people->dni }}</td>
+								<td>{{ $repose->people->first_name.' '.$repose->people->last_name }}</td>
+								<td>{{ $repose->people->type_employee }}</td>
+								<td>{{ Carbon\Carbon::parse($repose->date)->format('d-m-Y') }}</td> 
 								<td align="center">
-									<a href="{{ route('dependencias.show', $repose->id) }}" class="btn btn-info btn-sm">Ver</a>
-									<a href="{{ route('dependencias.edit', $repose->id) }}" class="btn btn-success btn-sm">Editar</a>
-									<a href="{{ route('dependencias.destroy', $repose->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+									<a href="{{ route('reposos.show', $repose->id) }}" class="btn btn-info btn-sm">Ver</a>
+									<a href="{{ route('reposos.edit', $repose->id) }}" class="btn btn-success btn-sm">Editar</a>
+									<a href="{{ route('reposos.destroy', $repose->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
 								</td>
 							</tr>
 						@endforeach							

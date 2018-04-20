@@ -4,21 +4,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
-
-                <div class="panel-heading">
-                	<b class="sub-header">Editar Dependencia</b>
-                	
-                </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        	<b class="sub-header">Editar Reposo</b>                	
+        </div>
 				<br>
 				<div class="panel-body">
-                    {!! Form::model($dependency, ['route' => ['dependencias.update', $dependency->id], 'method' => 'PUT'])!!}
-					<input type="hidden" name="id" value="{{-- $person->id --}}">
+          {!! Form::model($repose, ['route' => ['reposos.update', $repose->id], 'method' => 'PUT'])!!}
+              
+              @include('admin.reposes.partials.form')
 
-                        
-                        @include('admin.dependencies.partials.form')
-
-                    {!! Form::close() !!}
+          {!! Form::close() !!}
 				</div>
 				
 				
@@ -39,7 +35,8 @@
 @section('scripts')
 <script type="text/javascript">
 $(document).ready(function(){
-	$.fn.datepicker.dates['es'] = {
+  $('#people').select2();
+  $.fn.datepicker.dates['es'] = {
         days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
         daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
         daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
@@ -47,7 +44,7 @@ $(document).ready(function(){
         monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
         today: "Hoy"
     };
-	$('#birthdate').datepicker({
+  $('#date').datepicker({
       language: "es",
       format: "yyyy-mm-dd",
       weekStart:0,
@@ -56,7 +53,16 @@ $(document).ready(function(){
       orientation: "bottom right",
      
     });
-    $('#date_of_admission').datepicker({
+    $('#since').datepicker({
+      language: "es",
+      format: "yyyy-mm-dd",
+      weekStart:0,
+      todayHighlight: true,
+      todayBtn:true,
+      orientation: "bottom right",
+     
+    });
+    $('#until').datepicker({
       language: "es",
       format: "yyyy-mm-dd",
       weekStart:0,
@@ -67,5 +73,4 @@ $(document).ready(function(){
     });
 });
 </script>
-
 @endsection

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\ReposeStoreRequest;
 use App\Repose;
 use App\People;
 use Carbon\Carbon;
+
 class ReposeController extends Controller
 {
     /**
@@ -36,9 +38,10 @@ class ReposeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReposeStoreRequest $request)
     {
-        //
+        $peoples = Repose::create($request->all());
+        return redirect()->route('reposos.show', $peoples->id)->with('info', 'Reposo del titular '.$peoples->people_id.' Almacenado con Exito.!');
     }
 
     /**
@@ -47,9 +50,10 @@ class ReposeController extends Controller
      * @param  \App\Repose  $repose
      * @return \Illuminate\Http\Response
      */
-    public function show(Repose $repose)
+    public function show($id)
     {
-        //
+        $reposes = Repose::findOrFail($id);
+        return view('admin.reposes.show', compact('reposes'));
     }
 
     /**
@@ -58,9 +62,11 @@ class ReposeController extends Controller
      * @param  \App\Repose  $repose
      * @return \Illuminate\Http\Response
      */
-    public function edit(Repose $repose)
+    public function edit($id)
     {
-        //
+        $peoples = People::orderBy('id', 'ASC')->get()->pluck('full_name', 'id');
+        $repose = Repose::findOrFail($id);
+        return view('admin.reposes.edit', compact('repose', 'peoples'));
     }
 
     /**

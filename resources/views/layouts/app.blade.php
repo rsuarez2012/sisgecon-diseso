@@ -190,12 +190,12 @@
                               @endif                    
                           </div>
                           @if(count($errors))            
-                              <div class="col-md-10 col-md-offset-1">
+                              <div class="col-md-12 col-md-offset-0">
                                   <div class="alert alert-danger">
-                                     <i class="fa fa-exclamation-circle"></i>
+                                     
                                       <ul>
                                           @foreach($errors->all() as $error)
-                                          <li>{{ $error }}</li>
+                                          <li><i class="fa fa-exclamation-circle"></i> {{ $error }}</li>
                                           @endforeach
                                       </ul>
                                   </div>
