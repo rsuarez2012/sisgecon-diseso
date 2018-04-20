@@ -156,7 +156,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <div class="right_col" role="main" style="min-height: 569.633px;">
           <div class="">
             <div class="page-title">
               <div class="title_left">
