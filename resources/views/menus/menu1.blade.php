@@ -32,6 +32,25 @@
                         </a>
                     </li>
                     <li>
+                        <a>
+                            <i class="fa fa-h-square"></i> Citas e Historias <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a href="#">Citas Medica</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('historias.index') }}">Historias Medica</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('reposos.index') }}">Reposos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="{{ route('titulares.index') }}">
                             <i class="fa fa-users"></i>Titulares
                         </a>
@@ -44,19 +63,7 @@
                         <a href="{{ route('dependencias.index') }}">
                             <i class="fa fa-institution"></i>Dependencias</a>
                     </li>
-                    <li>
-                        <a>
-                            <i class="fa fa-h-square"></i> Historias <span class="fa fa-chevron-down"></span>
-                        </a>
-                        <ul class="nav child_menu">
-                            <li>
-                                <a href="{{ route('historias.index') }}">Historias Medica</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
-                            </li>
-                        </ul>
-                    </li> 
+                     
                     <li>
                         <a>
                             <i class="fa fa-user"></i>Usuarios
