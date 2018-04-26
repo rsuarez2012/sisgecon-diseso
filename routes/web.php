@@ -48,6 +48,8 @@ Route::resource('historia_ocupacional', 'Admin\OccupationalHistoryController');
 Route::resource('usuarios', 'Admin\UserController');
 
 
+Route::resource('reposos', 'Admin\ReposeController');
+
 
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');

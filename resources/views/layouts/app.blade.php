@@ -74,7 +74,7 @@
                     </li>
                     <li>
                         <a>
-                            <i class="fa fa-h-square"></i> Historias <span class="fa fa-chevron-down"></span>
+                            <i class="fa fa-h-square"></i> Historias Y Reposos <span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
@@ -82,6 +82,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('reposos.index') }}">Reposos</a>
                             </li>
                         </ul>
                     </li> 
@@ -187,12 +190,12 @@
                               @endif                    
                           </div>
                           @if(count($errors))            
-                              <div class="col-md-10 col-md-offset-1">
+                              <div class="col-md-12 col-md-offset-0">
                                   <div class="alert alert-danger">
-                                     <i class="fa fa-exclamation-circle"></i>
+                                     
                                       <ul>
                                           @foreach($errors->all() as $error)
-                                          <li>{{ $error }}</li>
+                                          <li><i class="fa fa-exclamation-circle"></i> {{ $error }}</li>
                                           @endforeach
                                       </ul>
                                   </div>
