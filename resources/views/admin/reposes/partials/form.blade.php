@@ -5,7 +5,7 @@
 </div>
 <div class="form-group col-md-12">
 	{{ Form::text('pathology', null, ['class' => 'form-control', 'id' => 'pathology']) }}
-	<small id="nameHelp" class="form-text text-muted">Patologia</small>
+	<small id="nameHelp" class="form-text text-muted">Motivo</small>
 </div>
 
 <div class="form-group col-md-4">

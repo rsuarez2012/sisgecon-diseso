@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReposeStoreRequest;
+use App\Http\Requests\ReposeUpdateRequest;
 use App\Repose;
 use App\People;
 use Carbon\Carbon;
@@ -17,7 +18,7 @@ class ReposeController extends Controller
      */
     public function index()
     {
-        $reposes = Repose::all();
+        $reposes = Repose::orderBy('date', 'DESC')->get();
         return view('admin.reposes.index', compact('reposes'));
     }
 
@@ -76,9 +77,13 @@ class ReposeController extends Controller
      * @param  \App\Repose  $repose
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Repose $repose)
+    public function update(ReposeStoreRequest $request, $id)
     {
-        //
+        $repose = Repose::findOrFail($id);
+    
+        $repose->fill($request->all())->save();
+        return redirect()->route('reposos.show', $repose->id)->with('info', 'El reposo del titular: ' . $repose->people->full_name . ' Fue Editado correctamente.!');
+   
     }
 
     /**
@@ -91,6 +96,6 @@ class ReposeController extends Controller
     {
         $repose = Repose::findOrFail($id);
         $repose->delete();
-        return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente');
+        return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente.!');
     }
 }
