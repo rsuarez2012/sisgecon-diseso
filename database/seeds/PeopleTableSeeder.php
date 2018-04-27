@@ -12,5 +12,11 @@ class PeopleTableSeeder extends Seeder
     public function run()
     {
         factory(App\People::class, 20)->create();
+
+        DB::table('users')->insert([
+        'name'  => 'Jhon Smith',
+        'email'     => 'admin@gmail.com',
+        'password'  => bcrypt('123456'),
+    ]);
     }
 }

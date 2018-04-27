@@ -27,6 +27,10 @@ class People extends Model
     {
         return $this->belongsTo('App\Dependency', 'dependency_id');
     }
+    public function reposes()
+    {
+    	return $this->hasMany('App\Repose', 'people_id');
+    }
 
     public function getTypeEmployeeAttribute()
 	{
