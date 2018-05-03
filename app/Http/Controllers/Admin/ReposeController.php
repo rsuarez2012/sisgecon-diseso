@@ -92,10 +92,11 @@ class ReposeController extends Controller
      * @param  \App\Repose  $repose
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
         $repose = Repose::findOrFail($id);
         $repose->delete();
-        return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente.!');
+        //return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente.!');
+        return redirect()->action('Admin\ReposeController@index')->with('info', 'El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente.!');
     }
 }

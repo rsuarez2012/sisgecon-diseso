@@ -49,6 +49,7 @@ Route::resource('usuarios', 'Admin\UserController');
 
 
 Route::resource('reposos', 'Admin\ReposeController');
+Route::get('reposos/{id}/eliminar', 'Admin\ReposeController@delete');
 
 
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
