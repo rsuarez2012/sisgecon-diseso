@@ -50,6 +50,9 @@ Route::resource('usuarios', 'Admin\UserController');
 
 Route::resource('reposos', 'Admin\ReposeController');
 
+//Documentos del titular
+Route::resource('documentos', 'Admin\DocumentController');
+
 
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
