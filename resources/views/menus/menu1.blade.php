@@ -51,14 +51,28 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('titulares.index') }}">
-                            <i class="fa fa-users"></i>Titulares
+                        <a>
+                            <i class="fa fa-h-square"></i> Trabajadores<span class="fa fa-chevron-down"></span>
                         </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a href="{{ route('titulares.index') }}">
+                                    <i class="fa fa-users"></i>Titulares                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('beneficiarios.index') }}">
+                                    <i class="fa fa-users"></i>Beneficiarios</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('documentos.index') }}">
+                                    <i class="fa fa-users"></i>Documentos</a>
+                            </li>
+                        </ul>
+
+
                     </li>
-                    <li>
-                        <a href="{{ route('beneficiarios.index') }}">
-                            <i class="fa fa-users"></i>Beneficiarios</a>
-                    </li>
+                    
                     <li>
                         <a href="{{ route('dependencias.index') }}">
                             <i class="fa fa-institution"></i>Dependencias</a>
