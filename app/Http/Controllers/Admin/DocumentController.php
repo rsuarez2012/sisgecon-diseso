@@ -122,8 +122,10 @@ class DocumentController extends Controller
      */
     public function destroy($id)
     {
-        $repose = Repose::findOrFail($id);
-        $repose->delete();
-        return redirect()->route('reposos.index')->with('info','El reposo del titular: ' . $repose->people->full_name . ' Fue Eliminado correctamente');
+        $document = Document::findOrFail($id);
+        //dd($document);
+        $document->delete();
+        //Document::destroy($id);
+        return redirect()->route('documentos.index')->with('info','La documentación del titular Fue Eliminado correctamente');
     }
 }

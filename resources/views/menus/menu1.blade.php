@@ -37,22 +37,22 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="#">Citas Medica</a>
+                                <a href="#"><i class="fa fa-calendar"></i>Citas Medica</a>
                             </li>
                             <li>
-                                <a href="{{ route('historias.index') }}">Historias Medica</a>
+                                <a href="{{ route('historias.index') }}"><i class="fa fa-h-square"></i>Historias Medica</a>
                             </li>
                             <li>
-                                <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                                <a href="{{ route('historia_ocupacional.index') }}"> <i class="fa fa-h-square"></i>Historia Ocupacional</a>
                             </li>
                             <li>
-                                <a href="{{ route('reposos.index') }}">Reposos</a>
+                                <a href="{{ route('reposos.index') }}"><i class="fa fa-wheelchair"></i>Reposos</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a>
-                            <i class="fa fa-h-square"></i> Trabajadores<span class="fa fa-chevron-down"></span>
+                            <i class="fa fa-users"></i> Empleados<span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
@@ -66,7 +66,7 @@
                             </li>
                             <li>
                                 <a href="{{ route('documentos.index') }}">
-                                    <i class="fa fa-users"></i>Documentos</a>
+                                    <i class="fa fa-folder"></i>Documentos</a>
                             </li>
                         </ul>
 

@@ -22,7 +22,7 @@
 								<th>Nombre y Apellido</th>
 								<th>Tipo de Empleado</th>
 								
-								<th style="text-align: center;">Acciones</th>
+								<th style="text-align: center;" colspan="3">Acciones</th>
 							</tr>
 						</thead>
 						<tbody>	
@@ -35,13 +35,20 @@
 								
 								<td align="center">
 									<!--<a href="{{-- route('documentos.show', $document->id) --}}" class="btn btn-info btn-sm" target="_blank">Ver</a>-->
-									@if(is_null($document->file))
-        								<h5>Esta orden no posee imagen de legalización</h5>
-        							@else
-	        							<a href="{{ asset($document->file) }}" class="btn cyan waves-effect waves-light right" target="_blank"><i class="material-icons right">description</i>Ver planilla</a>
-	        						@endif
-									<a href="{{ route('reposos.edit', $document->id) }}" class="btn btn-success btn-sm">Editar</a>
-									<a href="{{ route('reposos.destroy', $document->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar?')">Eliminar</a>
+									
+	        							<a href="{{ asset($document->file) }}"class="btn btn-info btn-sm" target="_blank"><i class="material-icons right"></i>Ver planilla</a>
+	        						</td>
+	        						<td>
+										<a href="{{ route('reposos.edit', $document->id) }}" class="btn btn-success btn-sm">Editar</a>
+									</td>
+	
+
+									{!! Form::open(['route' =>['documentos.destroy',$document],'method' => 'DELETE']) !!} 
+										<td><button type="submit" onclick ="return confirm('Seguro desea eliminar la docuentación?')" class="btn btn-danger btn-sm" >Eliminar</button></td>
+									{!! Form::close() !!}
+
+									<!--<a href="{{-- route('documentos.destroy', $document->id) --}}" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar?')">Eliminar</a>-->
+									
 								</td>
 							</tr>
 						@endforeach							
