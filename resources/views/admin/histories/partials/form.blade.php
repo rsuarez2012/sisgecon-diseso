@@ -23,7 +23,7 @@
 			    </div>
 			    <div class="form-group col-md-6">
 			    {{ Form::text('current_illness', null, ['class' => 'form-control']) }}
-			    <small id="nameHelp" class="form-text text-muted">Enfermedad Actual</small>
+			    	<small id="nameHelp" class="form-text text-muted">Enfermedad Actual</small>
 			    </div>
         	</div>
       	</div>

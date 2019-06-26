@@ -4,20 +4,19 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
-
-                <div class="panel-heading">
-                	<b class="sub-header">Nueva Historia Ocupacional</b>
-                	
-                </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        	<b class="sub-header">Editar Reposo</b>                	
+        </div>
 				<br>
 				<div class="panel-body">
-                    {!! Form::open(['route' => ['historia_ocupacional.store'], 'files' => true]) !!}
-                        
-                        @include('admin.occupational_histories.partials.form')
+          {!! Form::model($repose, ['route' => ['reposos.update', $repose->id], 'method' => 'PUT'])!!}
+              
+              @include('admin.reposes.partials.form')
 
-                    {!! Form::close() !!}
+          {!! Form::close() !!}
 				</div>
+				
 				
 			</div>
 
@@ -34,12 +33,10 @@
 
 @endsection
 @section('scripts')
-
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#people').select2();
-
-	$.fn.datepicker.dates['es'] = {
+  $('#people').select2();
+  $.fn.datepicker.dates['es'] = {
         days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
         daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
         daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
@@ -47,16 +44,7 @@ $(document).ready(function(){
         monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
         today: "Hoy"
     };
-	$('#since').datepicker({
-      language: "es",
-      format: "yyyy-mm-dd",
-      weekStart:0,
-      todayHighlight: true,
-      todayBtn:true,
-      orientation: "bottom left",
-     
-    });
-    $('#since1').datepicker({
+  $('#date').datepicker({
       language: "es",
       format: "yyyy-mm-dd",
       weekStart:0,
@@ -65,7 +53,7 @@ $(document).ready(function(){
       orientation: "bottom right",
      
     });
-    $('#since2').datepicker({
+    $('#since').datepicker({
       language: "es",
       format: "yyyy-mm-dd",
       weekStart:0,
@@ -75,34 +63,6 @@ $(document).ready(function(){
      
     });
     $('#until').datepicker({
-      language: "es",
-      format: "yyyy-mm-dd",
-      weekStart:0,
-      todayHighlight: true,
-      todayBtn:true,
-      orientation: "bottom right",
-     
-    });
-    $('#until1').datepicker({
-      language: "es",
-      format: "yyyy-mm-dd",
-      weekStart:0,
-      todayHighlight: true,
-      todayBtn:true,
-      orientation: "bottom right",
-     
-    });
-    $('#until2').datepicker({
-      language: "es",
-      format: "yyyy-mm-dd",
-      weekStart:0,
-      todayHighlight: true,
-      todayBtn:true,
-      orientation: "bottom right",
-     
-    });
-    
-    $('#accident_date').datepicker({
       language: "es",
       format: "yyyy-mm-dd",
       weekStart:0,

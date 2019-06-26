@@ -23,6 +23,7 @@ Route::post('/titulares/actualizar', 'PeopleController@update')->name('titulares
 
 //panel administrativo
 //titulares
+Route::resource('dashboard', 'Admin\DashboardController');
 Route::resource('titulares', 'Admin\PeopleController');
 Route::get('ver_carga/{id}/', 'Admin\PeopleController@beneficiaries')->name('titulares.beneficiarios');
 Route::get('bene', 'Admin\PeopleController@bene')->name('titulares.bene');
@@ -51,8 +52,14 @@ Route::resource('usuarios', 'Admin\UserController');
 Route::resource('reposos', 'Admin\ReposeController');
 Route::get('reposos/{id}/eliminar', 'Admin\ReposeController@delete');
 
+
 Route::resource('citas', 'Admin\QuotesController');
 Route::get('citas/{id}/eliminar', 'Admin\QuotesController@delete');
+
+//Documentos del titular
+Route::resource('documentos', 'Admin\DocumentController');
+
+
 
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');

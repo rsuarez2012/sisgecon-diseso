@@ -26,44 +26,66 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                     <li>
-                        <a>
-                            <i class="fa fa-home"></i> 
+                        <a href="{{ route('dashboard.index') }}"><i class="fa fa-home"></i> 
                             Dashboard                             
                         </a>
+                        
                     </li>
+                    <!--Citas medicas-->
                     <li>
                         <a>
                             <i class="fa fa-h-square"></i> Citas e Historias <span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="{{ route('citas.index') }}">Citas Medica</a>
+
+                                <a href="#"><i class="fa fa-calendar"></i>Citas Medica</a>
+
                             </li>
                             <li>
-                                <a href="{{ route('historias.index') }}">Historias Medica</a>
+                                <a href="{{ route('historias.index') }}"><i class="fa fa-h-square"></i>Historias Medica</a>
                             </li>
                             <li>
-                                <a href="{{ route('historia_ocupacional.index') }}">Historia Ocupacional</a>
+                                <a href="{{ route('historia_ocupacional.index') }}"> <i class="fa fa-h-square"></i>Historia Ocupacional</a>
                             </li>
                             <li>
-                                <a href="{{ route('reposos.index') }}">Reposos</a>
+                                <a href="{{ route('reposos.index') }}"><i class="fa fa-wheelchair"></i>Reposos</a>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{ route('titulares.index') }}">
-                            <i class="fa fa-users"></i>Titulares
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('beneficiarios.index') }}">
-                            <i class="fa fa-users"></i>Beneficiarios</a>
-                    </li>
+                    <!--dependencias-->
                     <li>
                         <a href="{{ route('dependencias.index') }}">
                             <i class="fa fa-institution"></i>Dependencias</a>
                     </li>
-                     
+                    <!--empleados-->
+                    <li>
+                        <a>
+                            <i class="fa fa-users"></i> Empleados<span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a href="{{ route('titulares.index') }}">
+                                    <i class="fa fa-users"></i>Titulares                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('beneficiarios.index') }}">
+                                    <i class="fa fa-users"></i>Beneficiarios</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('documentos.index') }}">
+                                    <i class="fa fa-folder"></i>Documentos</a>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                    <!--especialistas-->
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user-md"></i>Especialistas</a>
+                    </li>
                     <li>
                         <a>
                             <i class="fa fa-user"></i>Usuarios
