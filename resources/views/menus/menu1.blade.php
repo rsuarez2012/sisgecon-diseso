@@ -37,7 +37,7 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="#">Citas Medica</a>
+                                <a href="{{ route('citas.index') }}">Citas Medica</a>
                             </li>
                             <li>
                                 <a href="{{ route('historias.index') }}">Historias Medica</a>

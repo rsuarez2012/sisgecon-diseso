@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 /*Route::get('/titulares', 'PeopleController@index')->name('titulares');
 Route::get('/titulares/{id}/ver', 'PeopleController@show')->name('show');
@@ -51,6 +51,8 @@ Route::resource('usuarios', 'Admin\UserController');
 Route::resource('reposos', 'Admin\ReposeController');
 Route::get('reposos/{id}/eliminar', 'Admin\ReposeController@delete');
 
+Route::resource('citas', 'Admin\QuotesController');
+Route::get('citas/{id}/eliminar', 'Admin\QuotesController@delete');
 
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
