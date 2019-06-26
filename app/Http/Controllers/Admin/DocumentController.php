@@ -41,9 +41,11 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         $people = People::findOrFail($request->input('people_id'));
-        $document = Document::create($request->all());
-        //$file = $request->file('document');
-        //dd($request->file('file'));
+        
+        $document = new Document;
+        $document->people_id = $request->input('people_id');
+        //$document->file = $request->file('file');
+
         $rules = [
             'people_id' => 'required|unique:documents'
         ];
@@ -57,24 +59,16 @@ class DocumentController extends Controller
             request()->validate([
                 'file' => 'required|mimes:pdf,png,jpg,jpeg,gif,svg|max:2048',
             ]);
-            /*$peopleFile = $people->id.time().'.'.request()->file->getClientOriginalExtension();
-            request()->file->move(public_path('expedientes/'.$people->id.'/'), $peopleFile);
-            $file = 'expedientes/'.$people->id.'/'.$peopleFile;
-            $people->file = $file;
-            $people->save();*/
             $documentFile = $people->id;
             $nombre = $documentFile.'-'.request()->file->getClientOriginalName();
-            //request->file->move('expediente', $nombre);
+            //$request->file->move('expediente', $nombre);
             $document->file = $request->file('file')->move('expedientes', $nombre);//file es el nombre del input 
 
         }
         $this->validate($request, $rules, $messages);
         $document->save();
-        return 'listo';
-        //$peoples = Repose::create(
-        //    $request->all()
-        //);
-        //return redirect()->route('reposos.show', $peoples->id)->with('info', 'Reposo del titular '.$peoples->people_id.' Almacenado con Exito.!');
+        return redirect()->route('documentos.index')->with('info', 'Documentacion Almacenada con Exito.!');
+        
     }
 
     /**

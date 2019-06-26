@@ -26,11 +26,12 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                     <li>
-                        <a>
-                            <i class="fa fa-home"></i> 
+                        <a href="{{ route('dashboard.index') }}"><i class="fa fa-home"></i> 
                             Dashboard                             
                         </a>
+                        
                     </li>
+                    <!--Citas medicas-->
                     <li>
                         <a>
                             <i class="fa fa-h-square"></i> Citas e Historias <span class="fa fa-chevron-down"></span>
@@ -50,6 +51,12 @@
                             </li>
                         </ul>
                     </li>
+                    <!--dependencias-->
+                    <li>
+                        <a href="{{ route('dependencias.index') }}">
+                            <i class="fa fa-institution"></i>Dependencias</a>
+                    </li>
+                    <!--empleados-->
                     <li>
                         <a>
                             <i class="fa fa-users"></i> Empleados<span class="fa fa-chevron-down"></span>
@@ -72,12 +79,11 @@
 
 
                     </li>
-                    
+                    <!--especialistas-->
                     <li>
-                        <a href="{{ route('dependencias.index') }}">
-                            <i class="fa fa-institution"></i>Dependencias</a>
+                        <a href="#">
+                            <i class="fa fa-user-md"></i>Especialistas</a>
                     </li>
-                     
                     <li>
                         <a>
                             <i class="fa fa-user"></i>Usuarios
