@@ -22,7 +22,9 @@
 								<th>Nombre y Apellido</th>
 								<th>Tipo de Empleado</th>
 								
-								<th style="text-align: center;" colspan="3">Acciones</th>
+								<th></th>
+								<th>Acciones</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>	
