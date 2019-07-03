@@ -32,7 +32,10 @@
     <small id="relationship" class="form-text text-muted">Parentesco</small>
   </div>
   
-   <div class="form-group">
-	  {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
-	  <a class="btn btn-danger btn-sm" onclick="javascript:history.back();"><i class=""></i>Cancelar</a>
+  <div class="modal-footer">
+    
+     <!--<div class="form-group">-->
+  	  <a class="btn btn-danger btn-sm" onclick="javascript:history.back();"><i class=""></i>Cancelar</a>
+  	  {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
+    <!--</div>-->
   </div>
