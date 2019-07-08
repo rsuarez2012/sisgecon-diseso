@@ -19,6 +19,10 @@
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- FullCalendar -->
+    <link href="{{ asset('css/fullcalendar/dist/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fullcalendar/dist/fullcalendar.print.css') }}" rel="stylesheet" media="print">
     
 </head>
 <!--<body>-->
@@ -120,13 +124,26 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
-    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{-- asset('js/jquery.js') --}}"></script>
     <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
     <script src="{{ asset('js/select2.min.js') }}"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/actions.js') }}"></script>
+    <!-- FullCalendar -->
+    <script src="{{-- asset('js/moment/min/moment.min.js') --}}"></script>
+    <script src="{{-- asset('js/fullcalendar/dist/fullcalendar.min.js ') --}}"></script>
+    <script src="{{ asset('js/fullcalendar/es.js ') }}"></script>
+
 
     
-
+    <script src="{{-- asset('js/jquery/dist/jquery.min.js') --}}"></script>
+    <script src="{{-- asset('js/bootstrap/dist/js/bootstrap.min.js') --}}"></script>
+    <script src="{{ asset('js/fastclick/lib/fastclick.js') }}"></script>
+    
+    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar.js ') }}"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="{{-- asset('js/custom.min.js') --}}"></script>
+   
 </body>
 </html>

@@ -14,6 +14,7 @@ use App\People;
 use App\Dependency;
 use App\Beneficiary;
 use App\Repose;
+use App\Appointment;
 class DashboardController extends Controller
 {
 
@@ -31,7 +32,8 @@ class DashboardController extends Controller
         $people = People::count();
         $beneficiaries = Beneficiary::count();
         $reposes = Repose::count();
-        return view('admin.dashboard.dashboard', compact('people', 'beneficiaries', 'reposes'));
+        $appointments = Appointment::paginate(4);
+        return view('admin.dashboard.dashboard', compact('people', 'beneficiaries', 'reposes', 'appointments'));
     }
     public function index2()
     {

@@ -53,14 +53,29 @@ Route::resource('reposos', 'Admin\ReposeController');
 Route::get('reposos/{id}/eliminar', 'Admin\ReposeController@delete');
 
 
-Route::resource('citas', 'Admin\QuotesController');
-Route::get('citas/{id}/eliminar', 'Admin\QuotesController@delete');
+//Route::resource('citas', 'Admin\QuotesController');
+//Route::get('citas/{id}/eliminar', 'Admin\QuotesController@delete');
 
 //Documentos del titular
 Route::resource('documentos', 'Admin\DocumentController');
 
+//citas medicas
+Route::resource('citas', 'Admin\AppointmentController');
 
+//Medicos Especialistas
+Route::get('especialistas', 'Admin\UserController@specialists');
 
+/*Route::get('/citas', function () {
+	$appointments = App\Appointment::all();
+	return view('admin.appointments.index', compact('appointments'));
+});*/
+Route::get('/appointments', function(){
+	$appointments = App\Appointment::all();
+	return json_encode($appointments);
+});
+
+//Roles
+Route::resource('roles', 'Admin\RolController');
 /*Route::get('/titular_nuevo', 'PeopleController@create')->name('titularNuevo');*/
 //Route::post('/titular/guardar', 'PeopleController@store')->name('titular.create');
 /*Route::get('/titular/editar', 'PeopleController@edit')->name('titular.editar');*/

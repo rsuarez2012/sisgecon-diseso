@@ -15,7 +15,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 
+        'last_name', 
+        'dni', 
+        'telephone', 
+        'email', 
+        'password', 
+        'especialidad', 
+        'status', 
+        'image', 
+        'rol_id'
     ];
 
     /**
@@ -26,4 +35,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //relacion con los rol
+    public function roles(){
+        return $this->belongsTo('App\Rol');
+    }
+
+    public function getFullSpecialistAttribute()
+    {
+        return "{$this->first_name} {$this->last_name} - {$this->especialidad}";
+    }
 }

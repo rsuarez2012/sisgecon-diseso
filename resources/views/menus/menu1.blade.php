@@ -39,7 +39,7 @@
                         <ul class="nav child_menu">
                             <li>
 
-                                <a href="#"><i class="fa fa-calendar"></i>Citas Medica</a>
+                                <a href="{{ route('citas.index') }}"><i class="fa fa-calendar"></i>Citas Medica</a>
 
                             </li>
                             <li>
@@ -83,23 +83,28 @@
                     </li>
                     <!--especialistas-->
                     <li>
-                        <a href="#">
+                        <a href="{{ url('/especialistas') }}">
                             <i class="fa fa-user-md"></i>Especialistas</a>
                     </li>
                     <li>
                         <a>
-                            <i class="fa fa-user"></i>Usuarios
+                            <i class="fa fa-lock"></i>Administración
                             <span class="fa fa-chevron-down"></span>
 
                         </a>
                         <ul class="nav child_menu">
                           <li>
-                            <a href="{{ route('usuarios.index') }}">Usuarios</a>
-                          </li>
-                          <li>
                               <a href="{{ route('register') }}">
                                   Nuevo Usuario
                               </a>
+                          </li>
+                          <li>
+                              <a href="{{ route('roles.index') }}">
+                                  Roles de Usuarios
+                              </a>
+                          </li>
+                          <li>
+                            <a href="{{ route('usuarios.index') }}">Usuarios</a>
                           </li>
                         </ul>
                     </li>   
