@@ -129,6 +129,7 @@
     <script src="{{ asset('js/select2.min.js') }}"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/actions.js') }}"></script>
+
     <!-- FullCalendar -->
     <script src="{{-- asset('js/moment/min/moment.min.js') --}}"></script>
     <script src="{{-- asset('js/fullcalendar/dist/fullcalendar.min.js ') --}}"></script>
@@ -144,7 +145,8 @@
     <script src="{{ asset('js/fullcalendar.js ') }}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{-- asset('js/custom.min.js') --}}"></script>
-   
+
     <script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>
+
 </body>
 </html>
