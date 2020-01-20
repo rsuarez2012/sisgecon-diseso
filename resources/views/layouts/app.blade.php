@@ -125,8 +125,6 @@
     <script src="{{ asset('js/select2.min.js') }}"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/actions.js') }}"></script>
-
-    
-
+    <script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>
 </body>
 </html>

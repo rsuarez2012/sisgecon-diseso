@@ -58,6 +58,7 @@ Route::get('citas/{id}/eliminar', 'Admin\QuotesController@delete');
 
 //Documentos del titular
 Route::resource('documentos', 'Admin\DocumentController');
+Route::resource('memorando', 'Admin\CommunicationController');
 
 
 
