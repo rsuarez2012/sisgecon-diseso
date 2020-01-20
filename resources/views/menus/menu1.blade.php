@@ -86,6 +86,26 @@
                         <a href="{{ url('/especialistas') }}">
                             <i class="fa fa-user-md"></i>Especialistas</a>
                     </li>
+
+                    <li>
+                        <a>
+                            <i class="fa fa-file-text"></i>Comunicaciones
+                            <span class="fa fa-chevron-down"></span>
+
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a  href="{{ route('memorando.index') }}">
+                                    Memorandum
+                                </a>
+                            </li>
+                            <li>
+                                <a  href="#">
+                                    Oficios
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a>
                             <i class="fa fa-lock"></i>Administración
@@ -108,7 +128,7 @@
                           </li>
                         </ul>
                     </li>   
-                    <li></li>
+                    
                     <li></li>        
                 </ul>
               </div>

@@ -145,5 +145,6 @@
     <!-- Custom Theme Scripts -->
     <script src="{{-- asset('js/custom.min.js') --}}"></script>
    
+    <script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>
 </body>
 </html>

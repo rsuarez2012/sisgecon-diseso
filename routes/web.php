@@ -58,6 +58,7 @@ Route::get('reposos/{id}/eliminar', 'Admin\ReposeController@delete');
 
 //Documentos del titular
 Route::resource('documentos', 'Admin\DocumentController');
+Route::resource('memorando', 'Admin\CommunicationController');
 
 //citas medicas
 Route::resource('citas', 'Admin\AppointmentController');
