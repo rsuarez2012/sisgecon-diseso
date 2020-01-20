@@ -51,7 +51,8 @@ class BeneficiaryController extends Controller
         //$da = $request->all();
         //dd($da);
         $beneficiaries = Beneficiary::create($request->all());
-        return redirect()->route('titulares.index', $beneficiaries->id)->with('info', 'Beneficiario Almacenado con Exito.!');
+        //return redirect()->route('titulares.index', $beneficiaries->id)->with('info', 'Beneficiario Almacenado con Exito.!');
+        return back()->with('info', 'Beneficiario Almacenado con Exito.!');
         
     }
 

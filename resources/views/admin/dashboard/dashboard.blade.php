@@ -25,8 +25,8 @@
         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="tile-stats">
                 <div class="icon"><i class="fa fa-calendar"></i></div>
-                <div class="count">179</div>
-                <h3>Citas</h3>
+                <div class="count">{{ count($appointments) }}</div>
+                <h3><a href="{{ route('citas.index') }}">Citas</a></h3>
                 <p>Citas medicas registradas.</p>
             </div>
         </div>
@@ -224,7 +224,7 @@
               <div class="col-md-4">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Top Profiles <small>Sessions</small></h2>
+                    <h2>Citas <small>Medicas</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -244,55 +244,27 @@
                   </div>
                   <div class="x_content">
                     <article class="media event">
-                      <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
-                      </a>
-                      <div class="media-body">
-                        <a class="title" href="#">Item One Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
+                        @foreach($appointments as $appointment)
+                            <a class="pull-left date">
+                               <p class="month">April</p>
+                               <p class="day">23</p>
+                            </a>
+                            <div class="media-body">
+                                
+                                <a class="title" href="#">{{$appointment->people->full_name}}</a>
+                                <p>
+                                    @if(isset($appointment->beneficiary->full_name))
+                                        {{ ($appointment->beneficiary->full_name) }}
+                                    @else
+                                        {{ "N/B" }}
+                                    @endif
+                                </p>
+                               <p>{{ $appointment->user->full_specialist }}</p>
+                            </div>
+                            <hr>
+                        @endforeach
                     </article>
-                    <article class="media event">
-                      <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
-                      </a>
-                      <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </article>
-                    <article class="media event">
-                      <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
-                      </a>
-                      <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </article>
-                    <article class="media event">
-                      <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
-                      </a>
-                      <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </article>
-                    <article class="media event">
-                      <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
-                      </a>
-                      <div class="media-body">
-                        <a class="title" href="#">Item Three Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </article>
+                    {{$appointments->render()}}
                   </div>
                 </div>
               </div>

@@ -43,5 +43,9 @@ class Beneficiary extends Model
 				break;			
 		}
 		
+	}
+	public function getFullNameAttribute()
+	{
+		return "{$this->first_name} {$this->last_name} ";
 	}	
 }
