@@ -7,7 +7,7 @@
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                	<b class="sub-header">Nuevo Titular</b>
+                	<b class="sub-header">Nuevo Afiliado</b>
                 	
                 </div>
 				<br>

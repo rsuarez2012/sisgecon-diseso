@@ -52,8 +52,9 @@ class PeopleController extends Controller
      */
     public function store(PeopleStoreRequest $request)
     {
-        //$da = $request->all();
-        //dd($da);
+        dd($request);
+        $da = $request->all();
+        dd($da);
         $people = People::create($request->all());
         return redirect()->route('titulares.index', $people->id)->with('info', 'Titular Almacenado con Exito.!');
         //return redirect()->action('PeopleController@index')->with('info', 'Titular Almacenado con Exito.!');

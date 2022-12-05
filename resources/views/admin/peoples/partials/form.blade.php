@@ -1,15 +1,19 @@
 	{{ Form::hidden('$people->id') }}
   <div class="form-group col-md-4">
+  	{{  Form::select('affiliate', ['' => 'Afiliado', '1' => 'Si', '2' => 'No'], null, ['class' => 'form-control', 'id' => 'affiliate']) }}
+    <small id="marital_statusHelp" class="form-text text-muted">Afiliado</small>
+  </div>
+  <div class="form-group col-md-4">
     {{ Form::text('first_name', null, ['class' => 'form-control', 'id' => 'first_name']) }}
-    <small id="nameHelp" class="form-text text-muted">Nombre del titular</small>
+    <small id="nameHelp" class="form-text text-muted">Nombre del afiliado</small>
   </div>
   <div class="form-group col-md-4">
     {{ Form::text('last_name', null, ['class' => 'form-control', 'id' => 'last_name']) }}
-    <small id="nameHelp" class="form-text text-muted">Apellido del titular</small>
+    <small id="nameHelp" class="form-text text-muted">Apellido del afiliado</small>
   </div>
   <div class="form-group col-md-4">
     {{ Form::text('dni', null, ['class' => 'form-control', 'id' => 'dni']) }}
-    <small id="nameHelp" class="form-text text-muted">Cedula del titular</small>
+    <small id="nameHelp" class="form-text text-muted">Cedula del afiliado</small>
   </div>
 
 
@@ -25,13 +29,8 @@
   </div>
   <div class="form-group col-md-4">
   	{{  Form::select('gender', ['1' => 'Femenino', '2' => 'Masculino'], null, ['class' => 'form-control', 'id' => 'gender']) }}
-    <!--<select class="form-control" id="gender" name="gender" aria-describedby="genderHelp" >
-      <option>Seleccione el Sexo</option>
-      <option value="1">Femenino</option>
-      <option value="2">Masculino</option>
-    </select>-->
 
-    <small id="genderHelp" class="form-text text-muted">Sexo del titular</small>
+    <small id="genderHelp" class="form-text text-muted">Sexo del afiliado</small>
   </div>
 
 
@@ -39,7 +38,7 @@
 
   <div class="form-group col-md-4">
     {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'address']) }}
-    <small id="addressHelp" class="form-text text-muted">Dirección del titular</small>
+    <small id="addressHelp" class="form-text text-muted">Dirección del afiliado</small>
   </div>
   <div class="form-group col-md-4">
     {{ Form::text('email', null, ['class' => 'form-control', 'id' => 'email']) }}
@@ -49,12 +48,6 @@
 
   <div class="form-group col-md-4">
   	{{  Form::select('marital_status', ['1' => 'Soltero(a)', '2' => 'Casado(a)', '3' => 'Viudo(a)'], null, ['class' => 'form-control', 'id' => 'marital_status']) }}
-    <!--<select class="form-control" id="marital_status" name="marital_status" aria-describedby="marital_statusHelp" >
-      <option>Estado Civil</option>
-      <option value="1">Soltero(a)</option>
-      <option value="2">Casado(a)</option>
-      <option value="3">Viudo(a)</option>
-    </select>-->
     <small id="marital_statusHelp" class="form-text text-muted">Estado Civil</small>
   </div>
   
@@ -71,15 +64,6 @@
   
   <div class="form-group col-md-4">
   	{{  Form::select('employee_type', ['1' => 'Administrativo', '2' => 'Administrativo-Contratado', '3' => 'Docente', '4' => 'Docente-Contratado', '5' => 'Obrero', '6' => 'Obrero-Contratado'], null, ['class' => 'form-control', 'id' => 'employee_type']) }}
-    <!--<select class="form-control" id="employee_type" name="employee_type" aria-describedby="employee_typeHelp" >
-      <option>Tipo de Empleado</option>
-      <option value="1">Administrativo</option>
-      <option value="2">Administrativo-Contratado</option>
-      <option value="3">Docente</option>
-      <option value="4">Docente-Contratado</option>
-      <option value="5">Obrero</option>
-      <option value="6">Obrero-Contratado</option>
-    </select>-->
     <small id="employee_typeHelp" class="form-text text-muted">Tipo de Empleado</small>
   </div>
 
@@ -93,21 +77,14 @@
     {{ Form::text('position', null, ['class' => 'form-control', 'id' => 'position']) }}
     <small id="positionHelp" class="form-text text-muted">Cargo</small>
   </div>
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-6">
   	{{  Form::select('status', ['1' => 'Activo', '2' => 'Jubilado', '3' => 'Pensionado', '4' => 'Incapacitado'], null, ['class' => 'form-control', 'id' => 'marital_status']) }}
-    <!--<select class="form-control" id="status" name="status" aria-describedby="statusHelp" >
-      <option>Estatus del Empleado</option>
-      <option value="1">Activo</option>
-      <option value="2">Jubilado</option>
-      <option value="3">Pensionado</option>
-      <option value="4">Incapacitado</option>
-    </select>-->
-    <small id="statusHelp" class="form-text text-muted">Estatus del Titular</small>
+    <small id="statusHelp" class="form-text text-muted">Estatus del afiliado</small>
   </div>
-  <div class="form-group col-md-12">
-    {{-- Form::label('people_id', 'Titular') --}}
+  <div class="form-group col-md-6">
+    {{-- Form::label('people_id', 'afiliado') --}}
     {{ Form::select('dependency_id', $dependencies, null, ['class' => 'form-control']) }}
-    <small id="statusHelp" class="form-text text-muted">Dependencia a la que pertenece el Titular</small>
+    <small id="statusHelp" class="form-text text-muted">Dependencia a la que pertenece el afiliado</small>
   </div>
   <div class="form-group">
 	  {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}

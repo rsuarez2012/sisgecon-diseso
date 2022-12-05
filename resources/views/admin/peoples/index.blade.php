@@ -7,7 +7,7 @@
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                	<b class="sub-header">Titulares</b>
+                	<b class="sub-header">Afiliados</b>
                 	<a class="btn btn-primary btn-sm pull-right" href="{{ route('titulares.create') }}">
                         Nuevo
                     </a>

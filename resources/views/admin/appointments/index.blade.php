@@ -144,7 +144,7 @@ $(document).ready(function(){
 	                    title : '{{ $appointment->people->full_name }}',
 	                    start : '{{ $appointment->appointment }}',
 	                    beneficiary_id:'@if(isset($appointment->beneficiary->full_name)){{ ($appointment->beneficiary->full_name) }}@endif',
-	                    speciality_id: '{{ $appointment->user->full_specialist }}'
+	                    speciality_id: '{{-- $appointment->user->full_specialist --}}'
 	                    //description: '{{--$appointment->beneficiary->first_name.' '.$appointment->beneficiary->last_name--}}',
 	                    
 	                },

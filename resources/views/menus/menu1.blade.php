@@ -61,12 +61,12 @@
                     <!--empleados-->
                     <li>
                         <a>
-                            <i class="fa fa-users"></i> Empleados<span class="fa fa-chevron-down"></span>
+                            <i class="fa fa-users"></i> Pacientes<span class="fa fa-chevron-down"></span>
                         </a>
                         <ul class="nav child_menu">
                             <li>
                                 <a href="{{ route('titulares.index') }}">
-                                    <i class="fa fa-users"></i>Titulares                                
+                                    <i class="fa fa-users"></i>Afiliados                                
                                 </a>
                             </li>
                             <li>
